@@ -58,31 +58,78 @@ public sealed class ScentSystem : EntitySystem
     /// </summary>
     private void GetSmellVerbs(EntityUid uid, ScentComponent component, GetVerbsEvent<InteractionVerb> args)
     {
-        if (!args.CanInteract)
-            return;
         if (!TryComp<ScentComponent>(args.Target, out var scentComp))
             return;
-        if (!TryComp<SmellerComponent>(uid, out var smellerComp))
+        if (!TryComp<SmellerComponent>(args.User, out var smellerComp))
             return;
-        InteractionVerb verb = new()
+        if (args.CanInteract)
         {
-            Text = "Smell",
-            Priority = 2,
-            Disabled = !_interact.InRangeUnobstructed(
-                uid,
-                args.Target,
-                2f,
-                CollisionGroup.InteractImpassable),
+            InteractionVerb verb = new()
+            {
+                Text = "Smell",
+                Priority = 2,
+                Category = VerbCategory.Interaction,
+                Disabled = !_interact.InRangeUnobstructed(
+                    args.User,
+                    args.Target,
+                    2f,
+                    CollisionGroup.InteractImpassable),
+                Act = () =>
+                {
+                    DirectSmellScent(
+                        args.User,
+                        args.Target,
+                        smellerComp,
+                        scentComp);
+                }
+            };
+            args.Verbs.Add(verb);
+        }
+        // and a verb to toggle being able to smell this smelly beast
+        // trust me, its needed
+        if (args.User == args.Target)
+            return; // you already cant smell yourself!
+        var isIgnoringThem = IsIgnoringSmell(smellerComp, scentComp);
+        var toggleText = isIgnoringThem ? "Notice Scent" : "Ignore Scent";
+
+        InteractionVerb toggleVerb = new()
+        {
+            Text = toggleText,
+            Priority = 1,
+            Category = VerbCategory.Interaction,
             Act = () =>
             {
-                DirectSmellScent(
-                    uid,
-                    args.Target,
-                    smellerComp,
-                    scentComp);
+                ToggleIgnoreSmell(smellerComp, scentComp);
             }
         };
-        args.Verbs.Add(verb);
+        args.Verbs.Add(toggleVerb);
+    }
+
+    /// <summary>
+    /// Checks if the smeller is ignoring the scent of the target.
+    /// If all scent instance IDs of the target are in the smeller's ignored list, then they are ignoring the scent.
+    /// Otherwise, they are not.
+    /// </summary>
+    private static bool IsIgnoringSmell(SmellerComponent smeller, ScentComponent scent)
+    {
+        return scent.Scents.All(x => smeller.IgnoredScentInstanceIds.Contains(x.ScentInstanceId));
+    }
+
+    /// <summary>
+    /// Toggles ignoring the scent of the target.
+    /// </summary>
+    private static void ToggleIgnoreSmell(SmellerComponent smeller, ScentComponent scent)
+    {
+        if (IsIgnoringSmell(smeller, scent))
+        {
+            smeller.IgnoredScentInstanceIds.RemoveWhere(x => scent.Scents.Any(s => s.ScentInstanceId == x));
+        }
+        else
+        {
+            smeller.IgnoredScentInstanceIds.UnionWith(scent.Scents.Select(x => x.ScentInstanceId));
+            // also clear any pending smells from this scent
+            smeller.PendingSmells.RemoveAll(x => scent.Scents.Any(s => s.ScentInstanceId == x.ScentInstanceId));
+        }
     }
 
     /// <summary>
@@ -98,6 +145,8 @@ public sealed class ScentSystem : EntitySystem
             if (!_proto.TryIndex<ScentPrototype>(scent.ScentProto, out var proto))
                 continue; // invalid scent proto
             if (proto.ScentsExamine.Count == 0)
+                continue;
+            if (!LewdOkay(args.Examiner, proto.Lewd))
                 continue;
             var toAdd = _rng.Pick(proto.ScentsExamine);
             scentDescriptions.Add(Loc.GetString(
@@ -161,7 +210,6 @@ public sealed class ScentSystem : EntitySystem
         }
     }
 
-
     /// <inheritdoc/>
     /// <summary>
     /// Does two things:
@@ -171,13 +219,13 @@ public sealed class ScentSystem : EntitySystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+        if (NextSmellDetectionTime > _time.CurTime)
+            return;
+        NextSmellDetectionTime = _time.CurTime + BaseSmellCooldown;
 
         var query = EntityQueryEnumerator<SmellerComponent>();
         while (query.MoveNext(out var uid, out var component))
         {
-            if (NextSmellDetectionTime > _time.CurTime)
-                continue;
-            NextSmellDetectionTime = _time.CurTime + BaseSmellCooldown;
             if (!IsConnectedClient(uid))
                 continue;
             DetectSmells(uid, component);
@@ -220,6 +268,7 @@ public sealed class ScentSystem : EntitySystem
                     continue; // invalid scent proto
                 if (!CanDetectScent(
                         uid,
+                        scentUid,
                         component,
                         scent.ScentProto,
                         scent.ScentInstanceId,
@@ -253,6 +302,7 @@ public sealed class ScentSystem : EntitySystem
     /// </summary>
     private bool CanDetectScent(
         EntityUid uid,
+        EntityUid scentSourceUid,
         SmellerComponent component,
         ProtoId<ScentPrototype> scentProtoid,
         string scentGuid,
@@ -264,10 +314,16 @@ public sealed class ScentSystem : EntitySystem
         // early bounces
         if (distance > scentProto.FarRange)
             return false; // out of range!
-        if (scentProto.DetectionChance <= 0)
+        if (scentProto.DetectionPercent <= 0)
             return false; // undetectable scent
         if (scentProto.DirectOnly)
             return false; // dont detect non-passive scents
+        if (component.IgnoredScentInstanceIds.Contains(scentGuid))
+            return false; // ignoring this scent
+        // check if we have any components blocking us from smelling this scent
+        if (CompBlockSmell(uid, scentSourceUid, scentProto))
+            return false;
+        // lewd check
         if (!LewdOkay(uid, scentProto.Lewd))
             return false; // cant detect lewd scents
         if (SmellGuidIsOnCooldown(component, scentGuid))
@@ -286,6 +342,32 @@ public sealed class ScentSystem : EntitySystem
     }
 
     /// <summary>
+    /// Checks if any components block smell between the smeller and scent source.
+    /// </summary>
+    private bool CompBlockSmell(
+        EntityUid smellerUid,
+        EntityUid scentSourceUid,
+        ScentPrototype scentProto)
+    {
+        if (scentProto.BlockingComponents.Count > 0)
+        {
+            if (scentProto.BlockingComponents.Any(blockComp => HasComp(smellerUid, blockComp.Value.Component.GetType())))
+            {
+                return true; // blocked by component
+            }
+        }
+        // check if they have any components preventing them from emitting this scent
+        if (scentProto.PreventingComponents.Count > 0)
+        {
+            if (scentProto.PreventingComponents.Any(preventComp => HasComp(scentSourceUid, preventComp.Value.Component.GetType())))
+            {
+                return true; // prevented by component
+            }
+        }
+        return false;
+    }
+
+    /// <summary>
     /// Checks if the scent is on cooldown for the smeller.
     /// </summary>
     private bool SmellGuidIsOnCooldown(SmellerComponent component, string scentId)
@@ -294,8 +376,8 @@ public sealed class ScentSystem : EntitySystem
             return false;
         if (nextSmellTime == TimeSpan.Zero)
             return false; // no cooldown set
-        if (component.PendingSmells.Count <= 2)
-            return false; // not enough pending smells to be on cooldown
+        // if (component.PendingSmells.Count <= 2)
+        //     return false; // not enough pending smells to be on cooldown
         if (nextSmellTime <= _time.CurTime)
             return false;
         return true;
@@ -328,6 +410,7 @@ public sealed class ScentSystem : EntitySystem
             if (distanceFactor < 0.1f)
                 distanceFactor = 0.1f;
             priority += 2.0 + (3.0 * distanceFactor / proto.CloseRange);
+            // max priority is 6.0 at 0 distance
         }
         else
         {
@@ -390,6 +473,7 @@ public sealed class ScentSystem : EntitySystem
             // check if we can still smell it
             if (!CanDetectScent(
                     uid,
+                    ticket.SourceEntity,
                     component,
                     ticket.ScentProto,
                     ticket.ScentInstanceId,
@@ -429,6 +513,7 @@ public sealed class ScentSystem : EntitySystem
 
             if (!CanDetectScent(
                 uid,
+                ticket.SourceEntity,
                 component,
                 ticket.ScentProto,
                 ticket.ScentInstanceId,
@@ -443,9 +528,9 @@ public sealed class ScentSystem : EntitySystem
                 component.PendingSmells.Remove(ticket);
                 continue; // invalid scent proto
             }
-            var percentChance = (double) scentProto.DetectionChance;
+            var percentChance = (double) scentProto.DetectionPercent;
             var ticketPriority = ticket.GetPriority(_proto);
-            if (ticketPriority > 2.0)
+            if (ticketPriority > 1.0)
             {
                 percentChance *= ticketPriority;
                 if (percentChance > 100f)
@@ -554,10 +639,10 @@ public sealed class ScentSystem : EntitySystem
         }
         // The actual message!
 
-        var smellKind = PopupType.Medium;
+        var smellKind = PopupType.SmallLingering;
         if (proto.Stinky)
         {
-            smellKind = PopupType.MediumCaution;
+            smellKind = PopupType.SmallCautionLingering;
         }
 
         var locmsg = Loc.GetString(
@@ -620,6 +705,19 @@ public sealed class ScentSystem : EntitySystem
             smellerComp,
             directSmellTicket,
             true);
+        // and a popup to who you sniffed, telling them they got sniffed
+        var snifferName = Identity.Entity(
+            smellerUid,
+            EntityManager,scentUid);
+        var sniffedMsg = Loc.GetString(
+            "scent-sniffed-popup",
+            ("sniffer", snifferName));
+        _popupSystem.PopupEntity(
+            sniffedMsg,
+            scentUid,
+            scentUid,
+            PopupType.SmallLingering,
+            false);
     }
 
     /// <summary>
@@ -634,9 +732,23 @@ public sealed class ScentSystem : EntitySystem
         // first, remember that we smelled this scent, and set our personal cooldown
         // doesnt factor in here, its for the pending smell tickets
         // you can totally sniff someone any time tho
-        var cooldownSeconds = _rng.Next(
+        double cooldownSeconds = _rng.Next(
             scentProto.MinCooldown,
             scentProto.MaxCooldown);
+        var ticketPriority = ticket.GetPriority(_proto);
+        if (ticketPriority > 1.0)
+        {
+            // if the priority was higher than 1.0, reduce the cooldown via priority
+            // max reduction of 75% at 6.0 priority
+            // inverse square law based reduction
+            // simulates people being close to you smelling stronger for longer
+            var cdMultiplier = 25.0 / Math.Pow(ticketPriority + 4.0, 2.0);
+            cooldownSeconds *= cdMultiplier;
+            cooldownSeconds = Math.Clamp(
+                cooldownSeconds,
+                scentProto.MinCooldown,
+                scentProto.MaxCooldown);
+        }
         var nextSmellTime = _time.CurTime + TimeSpan.FromSeconds(cooldownSeconds);
         component.SmelledScentsCooldowns[ticket.ScentInstanceId] = nextSmellTime;
     }
@@ -653,7 +765,8 @@ public sealed class ScentSystem : EntitySystem
             return true;
         if (HasComp<AdminGhostComponent>(uid))
             return true;
-        return _consent.HasConsent(uid, "CanSmellLewdScents");
+        return !_consent.HasConsent(uid, "CantSmellLewdScents");
+        // dont like the fact that consents default to *ON*
     }
    #endregion
 

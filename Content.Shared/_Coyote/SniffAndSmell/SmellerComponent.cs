@@ -25,7 +25,7 @@ public sealed partial class SmellerComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("smellProcessingTickIntervalRange")]
-    public Vector2i SmellProcessingTickIntervalRange = new(20, 40);
+    public Vector2i SmellProcessingTickIntervalRange = new(10, 20);
 
     /// <summary>
     /// The next time we can process smells.
@@ -58,4 +58,11 @@ public sealed partial class SmellerComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public TimeSpan PendingSmellUpdateInterval = TimeSpan.FromSeconds(5);
+
+    /// <summary>
+    /// Set of GUIDs that we are ignoring smells from.
+    /// Used to temporarily ignore smells from certain sources.
+    /// </summary>
+    [ViewVariables]
+    public HashSet<string> IgnoredScentInstanceIds = new();
 }

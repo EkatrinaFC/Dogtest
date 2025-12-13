@@ -1,11 +1,22 @@
+# She smells like butt
 scent-examine-one      = [color=Yellow]{CAPITALIZE(SUBJECT($scenter))} {CONJUGATE-BASIC($scenter, "smell", "smells")} like {$scent}.[/color]
+# She smells like butt and cheese
 scent-examine-two      = [color=Yellow]{CAPITALIZE(SUBJECT($scenter))} {CONJUGATE-BASIC($scenter, "smell", "smells")} like {$scent1} and {$scent2}.[/color]
+# She smells like butt, cheese, bingus, coffee, cheetos and chicken
 scent-examine-multiple = [color=Yellow]{CAPITALIZE(SUBJECT($scenter))} {CONJUGATE-BASIC($scenter, "smell", "smells")} like {$scents}, with a hint of {$lastscent}.[/color]
+
+# Dan Kelly sniffs you.
+scent-sniffed-popup    = {CAPITALIZE($sniffer)} sniffs you.
 
 # Default scent messages
 # please dont show up ingame
+# She smells like something.
+scent-default-examine      = something.
+# Dan Kelly has a distinct smell.
 scent-default-direct       = {CAPITALIZE($src)} has a distinct smell.
+# You can smell something.
 scent-default-close        = You can smell something.
+# You catch a faint scent of something.
 scent-default-far          = You catch a faint scent of something.
 
 scent-default-lewd-direct  = {CAPITALIZE($src)} has a distinctly arousing scent.

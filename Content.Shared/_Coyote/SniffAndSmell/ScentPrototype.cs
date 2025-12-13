@@ -14,14 +14,16 @@ public sealed partial class ScentPrototype : IPrototype, IInheritingPrototype
     public string ID { get; } = default!;
 
     /// <inheritdoc />
-    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<ScentPrototype>))] // Frontier: EntityPrototype<BiomePrototype
+    /// <summary>
+    /// NOTE TO DAN: the field in the yaml is "parent", but this is "Parents" to match the interface
+    /// </summary>
+    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<ScentPrototype>))]
     public string[]? Parents { get; private set; }
 
     /// <inheritdoc />
     [NeverPushInheritance]
     [AbstractDataField]
     public bool Abstract { get; private set; }
-
 
     /// <summary>
     /// Examine text for this scent
@@ -81,14 +83,7 @@ public sealed partial class ScentPrototype : IPrototype, IInheritingPrototype
     /// percent chance of being detected per interval
     /// </summary>
     [DataField("detectionPercent")]
-    public int DetectionChance = 15;
-
-    /// <summary>
-    /// Interval time to attempt detection
-    /// In seconds
-    /// </summary>
-    [DataField("detectionInterval")]
-    public int DetectionInterval = 10;
+    public int DetectionPercent;
 
     /// <summary>
     /// Whether or not this scent is considered "bad"

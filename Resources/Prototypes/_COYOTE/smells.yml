@@ -1,11 +1,19 @@
 - type: scent
   id: ScentBase
+  abstract: true
   closeRange: 2
   farRange: 10
   minCooldownSeconds: 20
   maxCooldownSeconds: 120
-  detectionPercent: 20
-  detectionInterval: 10
+  msgsExamine:
+  - scent-default-examine
+  msgsDirect:
+  - scent-default-direct
+  msgsClose:
+  - scent-default-close
+  msgsFar:
+  - scent-default-far
+  detectionPercent: 35
   directOnly: false
   isStinky: false
   isLewd: false
@@ -33,69 +41,88 @@
   isStinky: true
 
 - type: scent
-  id: ScentExampleForFenny
-  parents:
-    - ScentBase
-  msgsExamine:
-    - scent-default-examine
-  msgsDirect:
-    - scent-default-direct
-  msgsClose:
-    - scent-default-close
-  msgsFar:
-    - scent-default-far
-- type: scent
-  id: ScentLewdExampleForFenny
-  parents:
-    - ScentBase
-    - ScentLewd
-  msgsExamine:
-    - scent-default-lewd-examine
-  msgsDirect:
-    - scent-default-lewd-direct
-  msgsClose:
-    - scent-default-lewd-close
-  msgsFar:
-    - scent-default-lewd-far
+  id: ScentNoExamine
+  abstract: true
+  msgsExamine: []
 
 - type: scent
-  id: ScentDirectOnlyExampleForFenny
-  parents:
-    - ScentBase
-    - ScentDirectOnly
-  msgsDirect:
-    - scent-default-cool-direct
+  id: ScentDefault
+  parent:
+  - ScentBase
+  - ScentNoExamine
+  - ScentDirectOnly
 
 - type: scent
-  id: ScentDirectOnlyLewdExampleForFenny
-  parents:
-    - ScentBase
-    - ScentDirectOnly
-    - ScentLewd
-  msgsDirect:
-    - scent-default-lewd-direct
+  id: ScentItemBase
+  abstract: true
+  parent:
+  - ScentDefault
 
+# Example Scents for Fenny
+
+#- type: scent
+#  id: ScentExampleForFenny
+#  parent:
+#  - ScentBase
+#  msgsExamine:
+#  - scent-default-examine
+#  msgsDirect:
+#  - scent-default-direct
+#  msgsClose:
+#  - scent-default-close
+#  msgsFar:
+#  - scent-default-far
+#
+#- type: scent
+#  id: ScentLewdExampleForFenny
+#  parent:
+#  - ScentBase
+#  - ScentLewd
+#  msgsExamine:
+#  - scent-default-lewd-examine
+#  msgsDirect:
+#  - scent-default-lewd-direct
+#  msgsClose:
+#  - scent-default-lewd-close
+#  msgsFar:
+#  - scent-default-lewd-far
+#
+#- type: scent
+#  id: ScentDirectOnlyExampleForFenny
+#  parent:
+#  - ScentBase
+#  - ScentDirectOnly
+#  msgsDirect:
+#  - scent-default-cool-direct
+#
+#- type: scent
+#  id: ScentDirectOnlyLewdExampleForFenny
+#  parent:
+#  - ScentBase
+#  - ScentDirectOnly
+#  - ScentLewd
+#  msgsDirect:
+#  - scent-default-lewd-direct
 
 # Primary Scents
 
 - type: scent
   id: ScentLinen
-  parents:
-    - ScentBase
+  parent:
+  - ScentBase
   msgsExamine:
   - scent-linen-examine
   msgsDirect:
-  -  scent-linen-direct
+  - scent-linen-direct
   msgsClose:
   - scent-linen-close
   msgsFar:
   - scent-linen-far
 
-
 - type: scent
   id: ScentCitrus
-  parents:
-    - ScentBase
+  parent:
+  - ScentBase
   msgsExamine:
   - scent-citrus-examine
   msgsDirect:
@@ -105,11 +132,10 @@
   msgsFar:
   - scent-citrus-far
 
-
 - type: scent
   id: ScentVanilla
-  parents:
-    - ScentBase
+  parent:
+  - ScentBase
   msgsExamine:
   - scent-vanilla-examine
   msgsDirect:
@@ -123,9 +149,9 @@
 
 - type: scent
   id: ScentLewdMusk
-  parents:
-    - ScentBase
-    - ScentLewd
+  parent:
+  - ScentBase
+  - ScentLewd
   msgsExamine:
   - scent-musk-examine
   msgsDirect:

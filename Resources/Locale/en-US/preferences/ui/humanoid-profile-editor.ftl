@@ -80,3 +80,4 @@ trait-category-rpi = Roleplay Interaction
 trait-category-examine = Examine Modifiers
 trait-category-temperament = Temperament
 trait-category-scents = Scents
+trait-category-scents-nsfw = NSFW Scents

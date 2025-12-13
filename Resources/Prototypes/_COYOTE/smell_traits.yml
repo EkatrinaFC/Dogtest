@@ -29,7 +29,7 @@
   id: ScentMusk
   name: trait-scent-musk-name
   description: trait-scent-musk-desc
-  category: Scents
+  category: ScentsNSFW
   cost: 1
   scentProtos:
   - ScentLewdMusk
