@@ -292,6 +292,8 @@ public sealed class ScentSystem : EntitySystem
         var query = EntityQueryEnumerator<SmellerComponent>();
         while (query.MoveNext(out var uid, out var component))
         {
+            if (!component.PassiveSmellDetectionEnabled)
+                continue;
             if (!IsConnectedClient(uid))
                 continue;
             DetectSmells(uid, component);
