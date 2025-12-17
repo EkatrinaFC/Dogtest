@@ -23,7 +23,7 @@ horny-bodytype-broadshouldered-brief         = broad-shouldered
 horny-bodytype-slender-descriptive           = {CAPITALIZE(SUBJECT($them))} {CONJUGATE-BASIC($them, "have", "has")} a thin, lightly built frame
 horny-bodytype-slender-brief                 = slender
 
-horny-bodytype-athletic-descriptive          = {CAPITALIZE(POSS-ADJ($them))}
+horny-bodytype-athletic-descriptive          = {CAPITALIZE(SUBJECT($them))} {CONJUGATE-BASIC($them, "look", "looks")} athletic and energetic
 horny-bodytype-athletic-brief                = athletic
 
 horny-bodytype-stocky-descriptive            = {CAPITALIZE(SUBJECT($them))} {CONJUGATE-BASIC($them, "are", "is")} short and solidly built
