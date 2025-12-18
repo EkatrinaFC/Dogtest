@@ -454,12 +454,6 @@ scent-weldingfuel-direct       = {CAPITALIZE($src)} smells like welding fuel.
 scent-weldingfuel-close        = You smell a trace of welding fuel.
 scent-weldingfuel-far          = You catch a faint whiff of welding fuel.
 
-# oil
-scent-oil-examine      = oil
-scent-oil-direct       = {CAPITALIZE($src)} smells like oil.
-scent-oil-close        = You smell a trace of oil.
-scent-oil-far          = You catch a faint whiff of oil.
-
 # dust
 scent-dust-examine      = dust
 scent-dust-direct       = {CAPITALIZE($src)} smells like dust.
