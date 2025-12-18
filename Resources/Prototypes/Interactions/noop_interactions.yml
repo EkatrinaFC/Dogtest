@@ -71,13 +71,14 @@
   effectSuccess:
     popup: Subtle
     sound: {path: /Audio/Floof/Lewd/blush.ogg}
+    obviousIfTargetIsNonPlayer: true
     soundPerceivedByOthers: false
   action:
     !type:NoOpAction
-  hideByRequirement: true
-  requirement:
-    !type:MobStateRequirement # Don't check out a wall
-    inverted: true
+#  hideByRequirement: true
+#  requirement:
+#    !type:MobStateRequirement # Don't check out a wall
+#    inverted: true
 
 - type: Interaction
   id: Nod
@@ -106,6 +107,7 @@
   categoryKey: interact-sfw
   effectSuccess:
     popup: Subtle
+    obviousIfTargetIsNonPlayer: true
   action:
     !type:NoOpAction
 
@@ -168,6 +170,8 @@
   categoryKey: interact-nsfw
   effectSuccess:
     popup: Subtle
+    obviousIfTargetIsNonPlayer: true
+    makeSoundSubtleIfObviousIfTargetIsNonPlayerIsTrue: true
     sound: {path: /Audio/Floof/Lewd/blush.ogg}
     soundPerceivedByOthers: false
   action:
@@ -201,6 +205,7 @@
   categoryKey: interact-nsfw
   effectSuccess:
     popup: Subtle
+    obviousIfTargetIsNonPlayer: true
     sound: {path: /Audio/Floof/Lewd/blush.ogg}
     soundPerceivedByOthers: false
   action:

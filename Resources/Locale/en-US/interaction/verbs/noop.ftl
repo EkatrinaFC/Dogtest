@@ -6,9 +6,10 @@ interaction-LookAt-success-others-popup = {THE($user)} looks at {THE($target)}.
 
 # Designed to not be seen by others, only you and your target.  Plays a light sound effect that is very unique to it to catch the attention of the party being eye'd up.
 interaction-CheckOut-name = Check out
-interaction-CheckOut-description = This lets you check someone out on the down low, only you and they will know you did.
+interaction-CheckOut-description = This lets you check someone out on the down low, only you and they will know you did. Unless they were never sentient to begin with!
 interaction-CheckOut-success-self-popup = You are really eyeballing {THE($target)}.
 interaction-CheckOut-success-target-popup = You think that {THE($user)} might be checking you out...
+interaction-CheckOut-success-others-popup = {THE($user)} eyes up {THE($target)}.
 
 interaction-Hug-name = Hug
 interaction-Hug-description = A hug a day keeps the psychological horrors beyond your comprehension away.
@@ -102,7 +103,7 @@ interaction-WinkSelf-success-others-popup = {THE($user)} winks!
 
 interaction-Nuzzle-name = Nuzzle
 interaction-Nuzzle-success-self-popup = You nuzzle {THE($target)}!
-interaction-Nuzzle-success-target-popup = {THE($user)} nuzzles {THE($target)}!
+interaction-Nuzzle-success-target-popup = {THE($user)} nuzzles you!
 interaction-Nuzzle-success-others-popup = {THE($user)} nuzzles {THE($target)}!
 
 

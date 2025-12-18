@@ -403,10 +403,12 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
             specifier.Popup,
             target,
             specifier);
-        var makeSoundObvious = specifier.ObviousIfTargetIsNonPlayer
-            && prePlopup is not null
-            && plopup is not null
-            && plopup != prePlopup;
+        var makeSoundObvious = specifier.SoundPerceivedByOthers
+                                   || (specifier.ObviousIfTargetIsNonPlayer
+                                       && prePlopup is not null
+                                       && plopup is not null
+                                       && plopup != prePlopup
+                                       && specifier.MakeSoundSubtleIfObviousIfTargetIsNonPlayerIsTrue);
         // Popups
         if (_protoMan.TryIndex(plopup, out var popup))
         {
@@ -443,7 +445,7 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
             // TODO we have a choice between having an accurate sound source or saving on an entity spawn...
             _audio.PlayEntity(sound, Filter.Entities(user, target), target, false, specifier.SoundParams);
 
-            if (specifier.SoundPerceivedByOthers || makeSoundObvious)
+            if (makeSoundObvious)
                 _audio.PlayEntity(sound, othersFilter, othersTarget, false,
                     specifier.SoundParams);
         }

@@ -230,6 +230,14 @@ public sealed partial class InteractionVerbPrototype : IPrototype, IInheritingPr
         /// </summary>
         [DataField]
         public bool ObviousIfTargetIsNonPlayer = false;
+        
+        /// <summary>
+        ///    If true, and ObviousIfTargetIsNonPlayer is also true, and it turns out that the
+        ///    target is a non-player entity, then the public sound will be suppressed.
+        ///    You and 'it' will still hear it, even though only you will actually hear it.
+        /// </summary>
+        [DataField]
+        public bool MakeSoundSubtleIfObviousIfTargetIsNonPlayerIsTrue = false;
 
         [DataField]
         public AudioParams SoundParams = new AudioParams()
