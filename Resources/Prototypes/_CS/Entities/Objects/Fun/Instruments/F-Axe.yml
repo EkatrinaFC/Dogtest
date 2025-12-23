@@ -6,7 +6,7 @@
   description: A reinforced keytar set up using a synths electronics. Designed for easy carrying and violence on stage.
   components:
   - type: Sprite
-    sprite: _DV/Objects/Fun/Instruments/f_axe.rsi
+    sprite: _CS/Objects/Fun/Instruments/f_axe.rsi
     state: icon
   - type: Item
     size: Normal
