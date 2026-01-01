@@ -232,7 +232,7 @@
   - DocShoes
   - ContractorFace
   - ContractorGlasses
-  - NurseBelt # Coyote
+  - NurseBelt # Coyote ContractorBelt < NurseBelt (Inherits ContractorBelt)
   - DocEars
   - ContractorBoxSurvival
   - DocPDA
