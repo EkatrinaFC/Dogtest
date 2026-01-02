@@ -919,7 +919,9 @@
       table: !type:GroupSelector
         children:
         - id: MobCarpMagic
+          # weight: 1.0 # Coyote
         - id: MobCarpHolo
+          # weight: 1.0 # Coyote
         - id: MobAdultSlimesYellowAngry # Coyote
         - id: MobAngryBee # Coyote
         - id: MobBearSpace # Coyote
