@@ -1,6 +1,6 @@
 - type: entity
   name: security stun baton
-  parent: [BaseItem, BaseC3Meta] # Coyote: BaseC3Meta Contraband, OOCly should not be looted.
+  parent: [BaseItem, BaseC3Meta]
   id: SecStunbaton
   description: A security grade stun baton for incapacitating people with. Actively harming with this is considered bad tone.
   components:

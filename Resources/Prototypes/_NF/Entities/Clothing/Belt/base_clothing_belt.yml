@@ -78,7 +78,6 @@
         whitelist:
           components:
           - Stunbaton
-          - SecStunbaton # Coyote: Added SecStunbaton
       tear_gas_grenade:
         whitelist:
           components:
