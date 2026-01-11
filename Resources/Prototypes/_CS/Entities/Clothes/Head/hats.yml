@@ -5,6 +5,6 @@
   description: Keeps the hair out of the deep fryer
   components:
   - type: Sprite
-    sprite: _CS/Clothing/Head/Hats/donkcohat.rsi
+    sprite: _CS/Clothes/Head/Hats/donkcohat.rsi
   - type: Clothing
-    sprite: _CS/Clothing/Head/Hats/donkcohat.rsi
+    sprite: _CS/Clothes/Head/Hats/donkcohat.rsi

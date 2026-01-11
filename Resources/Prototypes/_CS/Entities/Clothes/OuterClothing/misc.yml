@@ -5,6 +5,6 @@
   description: An apron for catching all the grease from the deep fryer
   components:
   - type: Sprite
-    sprite: _CS/Clothing/OuterClothing/Misc/donkcochefapron.rsi
+    sprite: _CS/Clothes/OuterClothing/Misc/donkcochefapron.rsi
   - type: Clothing
-    sprite: _CS/Clothing/OuterClothing/Misc/donkcochefapron.rsi
+    sprite: _CS/Clothes/OuterClothing/Misc/donkcochefapron.rsi
