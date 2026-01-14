@@ -9,7 +9,7 @@
 
 - type: entity
   parent: CSBaseSign
-  id: TSF Sign
+  id: TSFSign
   abstract: true
   components:
   - type: Sprite
@@ -17,7 +17,7 @@
 
 - type: entity
   parent: CSBaseSign
-  id: Donk co sign
+  id: Donkcosign
   abstract: true
   components:
   - type: Sprite
@@ -25,7 +25,7 @@
 
 - type: entity
   parent: CSBaseSign
-  id: Donk co logo left
+  id: Donkcologoleft
   abstract: true
   components:
   - type: Sprite
@@ -33,7 +33,7 @@
 
 - type: entity
   parent: CSBaseSign
-  id: Donk co logo right
+  id: Donkcologoright
   abstract: true
   components:
   - type: Sprite
