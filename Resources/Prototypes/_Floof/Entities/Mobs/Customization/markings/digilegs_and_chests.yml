@@ -657,23 +657,6 @@
   - sprite: _CS/DigiLegsAndChests.rsi
     state: BirdChestFemale
 
-# Etherial chest
-- type: marking
-  id: DigilegEtherialTorsoMale
-  bodyPart: Chest
-  markingCategory: BaseChest
-  sprites:
-  - sprite: _CS/DigiLegsAndChests.rsi
-    state: EtherialChestMale
-
-- type: marking
-  id: DigilegEtherialTorsoFemale
-  bodyPart: Chest
-  markingCategory: BaseChest
-  sprites:
-  - sprite: _CS/DigiLegsAndChests.rsi
-    state: EtherialChestFemale
-
 # Human chest
 - type: marking
   id: DigilegHumanTorsoMale
