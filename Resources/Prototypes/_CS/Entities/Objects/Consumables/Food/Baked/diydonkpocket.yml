@@ -1,31 +1,7 @@
-# Base
-
-- type: entity
-  parent: FoodInjectableBase
-  id: FoodDIYDonkpocketBase
-  abstract: true
-  components:
-  - type: Food
-  - type: Sprite
-    sprite: _CS/Objects/Consumable/Food/Baked/diydonkpocket.rsi
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 3
-  - type: Item
-    size: Tiny
-  - type: Tag
-    tags:
-    - DonkPocket
-
-
 # Flavours
 - type: entity
   name: Bbq Donk Pocket
-  parent: FoodDIYDonkpocketBase
+  parent: FoodDonkpocketBase
   id: FoodDonkpocketBbqDIY
   description: Add heat for the easiest backyard BBQ!
   components:
@@ -40,7 +16,7 @@
 
 - type: entity
   name: Banana Donk Pocket
-  parent: FoodDIYDonkpocketBase
+  parent: FoodDonkpocketBase
   id: FoodDonkpocketBananaDIY
   description: Banana
   components:
