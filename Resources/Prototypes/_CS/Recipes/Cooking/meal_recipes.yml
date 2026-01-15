@@ -1,0 +1,41 @@
+# Heated Donk Pockets
+
+- type: microwaveMealRecipe
+  id: RecipeWarmDonkpocketBbq
+  name: warm bbq donk pocket recipe
+  result: FoodDonkpocketBbqWarm
+  time: 5
+  group: Savory
+  solids:
+    FoodDonkpocketBbq: 1
+  recipeType: Microwave # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeWarmDonkpocketChocolate
+  name: warm chocolate donk pocket recipe
+  result: FoodDonkpocketChocolateWarm
+  time: 5
+  group: Sweet
+  solids:
+    FoodDonkpocketChocolate: 1
+  recipeType: Microwave # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeWarmDonkpocketMaple
+  name: warm maple donk pocket recipe
+  result: FoodDonkpocketMapleWarm
+  time: 5
+  group: Sweet
+  solids:
+    FoodDonkpocketMaple: 1
+  recipeType: Microwave # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeWarmDonkpocketSupermatter
+  name: warm supermatter donk pocket recipe
+  result: FoodDonkpocketSupermatterWarm
+  time: 5
+  group: Savory
+  solids:
+    FoodDonkpocketSupermatter: 1
+  recipeType: Microwave # Frontier
