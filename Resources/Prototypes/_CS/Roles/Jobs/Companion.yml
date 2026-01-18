@@ -1,12 +1,12 @@
 - type: job
-  id: MassageTherapist
-  name: job-name-massage-therapist
-  description: job-description-massage-therapist
-  playTimeTracker: JobMassageTherapist
-  startingGear: CSMassageTherapistGear
+  id: Companion
+  name: job-name-companion
+  description: job-description-companion
+  playTimeTracker: JobCompanion
+  startingGear: CSCompanionGear
   alwaysUseSpawner: false
   icon: "JobIconBoxer"
-  supervisors: job-supervisors-massage-therapist
+  supervisors: job-supervisors-companion
   weight: 40
   displayWeight: 3
   canBeAntag: false
@@ -18,33 +18,31 @@
     prototype: FrontierBirthdayGift
   - !type:AddRpiAuraSpecial
     aurasToAdd:
-    - rpiAuraMassageTherapist
+    - rpiAuraCompanion
   - !type:RpiChatJudgementModifierSpecial
     modsToAdd:
-    - rpiChatJudgementModifierMassageTherapist
+    - rpiChatJudgementModifierCompanion
 
 - type: playTimeTracker
-  id: JobMassageTherapist
+  id: JobCompanion
 
 - type: entity
-  id: SpawnPointMassageTherapist
+  id: SpawnPointCompanion
   parent: SpawnPointPassenger
   name: massage therapist spawn point
   components:
   - type: SpawnPoint
-    job_id: MassageTherapist
-    alt_jobs:
-    - Companion
+    job_id: Companion
 
 - type: startingGear
-  id: CSMassageTherapistGear
+  id: CSCompanionGear
   storage:
     back:
     - EncryptionKeyService
-    - ShipVoucherCoyoteMassageTherapist
+    - ShipVoucherCoyoteCompanion
 
 - type: roleLoadout
-  id: JobMassageTherapist
+  id: JobCompanion
   groups:
   - ContractorHead
   - ContractorNeck
@@ -70,8 +68,8 @@
   - NFSpeciesSpecific
 
 - type: chameleonOutfit
-  id: MassageTherapistChameleonOutfit
-  job: MassageTherapist
+  id: CompanionChameleonOutfit
+  job: Companion
   equipment:
     head: ClothingHeadHatChef
     eyes: ClothingEyesGlassesCheapSunglasses
@@ -80,3 +78,32 @@
     outerClothing: ClothingOuterJacketChef
     gloves: ClothingHandsGlovesColorWhite
     shoes: ClothingShoesChef
+
+# Interview variant
+- type: job
+  id: CompanionInterview
+  name: job-name-companion-interview
+  description: job-description-companion
+  playTimeTracker: JobCompanionInterview
+  startingGear: CompanionHologramGear
+  icon: "JobIconBoxer"
+  supervisors: job-supervisors-hire
+  accessGroups:
+  - GeneralAccess
+  jobEntity: InterviewHologramCompanion
+  newPlayerMessage: false
+
+- type: startingGear
+  id: CompanionHologramGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGrey
+    shoes: ClothingShoesColorBlack
+
+- type: entity
+  id: InterviewHologramCompanion
+  parent: InterviewHologram
+  categories: [ HideSpawnMenu, DoNotMap ]
+  components:
+  - type: InterviewHologram
+    job: Companion
+
