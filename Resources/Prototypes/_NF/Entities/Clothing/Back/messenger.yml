@@ -660,7 +660,7 @@
 ## Antagonists / Contraband
 - type: entity
   parent:
-  - BaseC3SyndicateContrabandUnredeemable
+  - BaseC1ContrabandUnredeemable
   - ClothingBackpackMessengerContractor
   - ContrabandClothing
   id: ClothingBackpackMessengerSyndicate
@@ -701,7 +701,7 @@
 
 - type: entity
   parent:
-  - BaseC3CultContrabandUnredeemable
+  - BaseC1ContrabandUnredeemable
   - ClothingBackpackMessengerContractor
   - ContrabandClothing
   id: ClothingBackpackMessengerBloodCult

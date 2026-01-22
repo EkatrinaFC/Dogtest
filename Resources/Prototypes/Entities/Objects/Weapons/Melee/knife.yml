@@ -253,7 +253,9 @@
 
 - type: entity
   name: uranium shiv
-  parent: Shiv
+  parent:
+  - Shiv
+  - BaseC4Contraband
   id: UraniumShiv
   description: A crude weapon fashioned from a piece of cloth and a uranium glass shard. Violates the geneva convention!
   components:

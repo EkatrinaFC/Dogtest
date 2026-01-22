@@ -31,7 +31,7 @@
 #region manufacturer
 - type: entity
   id: NFBaseWeaponFrameRifleSniperCybersun
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameRifleSniper ]
+  parent: [ BaseC4Contraband, NFBaseWeaponFrameRifleSniper ]
   abstract: true
   components:
   - type: Gun
@@ -43,7 +43,7 @@
 
 - type: entity # Coyote added NFSD version of the Hristov
   id: NFBaseWeaponFrameRifleSniperNFSD
-  parent: [ BaseC3MetaSec, NFBaseWeaponFrameRifleSniper ] # COYOTE: BaseC2ContrabandUnredeemable -> BaseC3MetaSec
+  parent: [ BaseC4ContrabandUnredeemable, NFBaseWeaponFrameRifleSniper ] # COYOTE: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   abstract: true
   components:
   - type: Gun

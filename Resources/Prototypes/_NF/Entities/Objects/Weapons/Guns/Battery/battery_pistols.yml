@@ -125,7 +125,7 @@
 #region Pulse
 - type: entity
   id: NFWeaponEnergyPistolPulse
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponEnergyPistolHitScanPulse, NFBaseWeaponFrameEnergyPistolNanotrasen ]
+  parent: [ BaseC4ContrabandUnredeemable, NFBaseWeaponEnergyPistolHitScanPulse, NFBaseWeaponFrameEnergyPistolNanotrasen ]
   name: pulse pistol
   description: |-
     A state of the art energy pistol favoured as a sidearm by the NT operatives. On the handle is a label that says 'for authorized use only.'
@@ -191,7 +191,9 @@
 
 - type: entity
   id: NFWeaponPistolCHIMPUpgraded
-  parent: WeaponPistolCHIMPUpgraded
+  parent:
+  - WeaponPistolCHIMPUpgraded
+  - BaseC4Contraband
   components:
   - type: ProjectileBatteryAmmoProvider
     proto: NFAnomalousParticleDeltaStrong

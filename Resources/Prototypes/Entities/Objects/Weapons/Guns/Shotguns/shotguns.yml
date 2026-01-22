@@ -47,7 +47,7 @@
   categories: [ HideSpawnMenu ] # Frontier
   name: Bulldog
   # Don't parent to BaseWeaponShotgun because it differs significantly
-  parent: [BaseItem, BaseGunWieldable, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseItem, BaseGunWieldable, BaseC4Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: WeaponShotgunBulldog
   description: An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids. Uses .50 shotgun shells.
   components:
@@ -256,7 +256,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: blunderbuss
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC3PirateContraband] # Frontier: BaseMinorContraband<BaseC3PirateContraband
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC3Contraband] # Frontier: BaseMinorContraband<BaseC3Contraband
   id: WeaponShotgunBlunderbuss
   suffix: Pirate
   description: Deadly at close range, an illegal shotgun often found at the side of a pirate.

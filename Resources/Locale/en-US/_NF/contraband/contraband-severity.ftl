@@ -11,3 +11,4 @@ contraband-examine-text-PirateTarget = [color=yellow]This item may be a highly v
 contraband-examine-text-Class3MobHuman =  [color=magenta]This individual is deemed too dangerous to be contained, and is considered as class 3 contraband when in captivity. Keeping them in confinement, alive or dead, is illegal.[/color]
 contraband-examine-text-Class3MobCreature = [color=magenta]This creature is deemed too dangerous to be contained, and is considered as class 3 contraband when in captivity. Keeping it in confinement, alive or dead, is illegal.[/color]
 contraband-examine-text-Class3MobConstruct = [color=magenta]This intelligence is deemed too dangerous to be contained, and is considered as class 3 contraband when in captivity. Keeping it in confinement, alive or dead, is illegal.[/color]
+contraband-examine-text-Class4General = [color=magenta]This item is considered class 4 contraband, and its possession is really illegal.[/color]

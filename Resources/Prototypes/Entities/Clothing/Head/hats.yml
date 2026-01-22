@@ -62,7 +62,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
+  parent: [ClothingHeadBase, BaseC1ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: ClothingHeadHatSecurityTrooper
   name: trooper hat
   description: A campaign hat for the Nanotrasen Troopers, comes with a case too, but you lost it.
@@ -227,7 +227,7 @@
     sprite: Clothing/Head/Hats/bowler_hat.rsi
 
 - type: entity
-  parent: ClothingHeadBase # Frontier: removed BaseCommandContraband
+  parent: ClothingHeadBase # Frontier: removed BaseC4Contraband
   id: ClothingHeadHatCaptain
   name: captain's hardhat
   description: It's good being the king.
@@ -259,7 +259,7 @@
   - type: IngestionBlocker
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  parent: [ ClothingHeadBase, BaseC4Contraband ]
   id: ClothingHeadHatCentcom
   name: CentComm brand hat
   description: "It's good to be the emperor."
@@ -341,7 +341,7 @@
     sprite: Clothing/Head/Hats/fez.rsi
 
 - type: entity
-  parent: ClothingHeadBase # Frontier: removed BaseCommandContraband
+  parent: ClothingHeadBase # Frontier: removed BaseC4Contraband
   id: ClothingHeadHatHopcap
   name: head of personnel's cap
   description: A grand, stylish head of personnel's cap.
@@ -358,7 +358,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingHeadBase, BaseC1ContrabandUnredeemable] # Frontier: BaseC4Contraband<BaseC2ContrabandUnredeemable
   id: ClothingHeadHatHoshat
   name: head of security cap
   description: The robust standard-issue cap of the Head of Security. For showing the officers who's in charge.
@@ -692,7 +692,7 @@
 
 - type: entity
   abstract: true
-  parent: [ ClothingHeadBase, BaseC3WizardContraband ] # Frontier: BaseMagicalContraband<BaseC3WizardContraband
+  parent: [ ClothingHeadBase, NotContraband ] # Frontier: BaseMagicalContraband<NotContraband
   id: ClothingHeadHatWizardBase
   components:
   - type: WizardClothes
@@ -737,7 +737,7 @@
     sprite: Clothing/Head/Hats/truckershat.rsi
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingHeadBase, BaseC1Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC4Contraband, added ContrabandClothing as parent
   id: ClothingHeadPyjamaSyndicateBlack
   name: syndicate black pyjama hat
   description: For keeping that traitor head of yours warm.
@@ -753,7 +753,7 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingHeadBase, BaseC1Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC4Contraband, added ContrabandClothing as parent
   id: ClothingHeadPyjamaSyndicatePink
   name: syndicate pink pyjama hat
   description: For keeping that traitor head of yours warm.
@@ -769,7 +769,7 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingHeadBase, BaseC1Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC4Contraband, added ContrabandClothing as parent
   id: ClothingHeadPyjamaSyndicateRed
   name: syndicate red pyjama hat
   description: For keeping that traitor head of yours warm.
@@ -910,7 +910,7 @@
         HeadSide : HEAD
 
 - type: entity
-  parent: ClothingHeadBase # Frontier: removed BaseCommandContraband
+  parent: ClothingHeadBase # Frontier: removed BaseC4Contraband
   id: ClothingHeadHatBeretCmo
   name: chief medical officer's beret
   description: Turquoise beret with a cross on the front. The sight of it calms you down and makes it clear that you will be cured.
@@ -968,7 +968,7 @@
         Caustic: 0.95
 
 - type: entity
-  parent: [ClothingHeadBase] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband added ContrabandClothing as parent # coyote: de contra'd it
+  parent: [ClothingHeadBase] # Frontier: BaseSyndicateContraband<BaseC4Contraband added ContrabandClothing as parent # coyote: de contra'd it
   id: ClothingHeadHatSyndie
   name: syndicate hat
   description: A souvenir hat from "Syndieland", their production has already been closed.
@@ -1069,7 +1069,7 @@
   - type: BlockMovement
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  parent: [ ClothingHeadBase, BaseC4Contraband ]
   id: ClothingHeadHatCentcomcap
   name: CentComm cap
   description: An extravagant, fancy Central Commander cap.

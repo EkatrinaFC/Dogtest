@@ -2,7 +2,7 @@
   name: wizard staff
   parent:
   - Shovel
-  - BaseC3WizardContraband
+  - BaseC4Contraband
   id: WizardStaffMeleeBase
   description: Symbol of wizard's mastery of arcane arts.
   components:
@@ -49,7 +49,9 @@
 
 - type: entity
   name: inert red wizard staff
-  parent: WizardStaffMeleeBase
+  parent:
+  - WizardStaffMeleeBase
+  - NotContraband
   id: WizardStaffMeleeRed
   components:
   - type: Item
@@ -59,7 +61,9 @@
 
 - type: entity
   name: inert violet wizard staff
-  parent: WizardStaffMeleeBase
+  parent:
+  - WizardStaffMeleeBase
+  - NotContraband
   id: WizardStaffMeleeViolet
   components:
   - type: Item
@@ -69,7 +73,9 @@
 
 - type: entity
   name: inert soap wizard staff
-  parent: WizardStaffMeleeBase
+  parent:
+  - WizardStaffMeleeBase
+  - NotContraband
   id: WizardStaffMeleeSoap
   components:
   - type: Item
@@ -79,7 +85,9 @@
 
 - type: entity
   name: inert brick wizard staff
-  parent: WizardStaffMeleeBaseNF
+  parent:
+  - WizardStaffMeleeBaseNF
+  - NotContraband
   id: WizardStaffMeleeBrick
   components:
   - type: Item
@@ -98,7 +106,7 @@
   id: WizardStaffMeleeBlood
   name: inert cultist staff
   parent:
-  - BaseC3CultContraband
+  - BaseC1Contraband
   - WizardStaffMeleeRed
   components:
   - type: Sharp
@@ -116,7 +124,7 @@
   id: WizardStaffDarkBolt
   name: cultist staff
   parent:
-  - BaseC3CultContraband
+  - BaseC4Contraband
   - WizardStaffMeleeBlood
   suffix: "Dark bolt"
   components:

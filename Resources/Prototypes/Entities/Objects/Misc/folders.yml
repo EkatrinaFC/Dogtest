@@ -246,7 +246,7 @@
 
 - type: entity
   id: BoxFolderQmClipboard
-  parent: [BaseC2ContrabandUnredeemable, BoxFolderClipboard] # Frontier: BaseGrandTheftContraband<BaseC2ContrabandUnredeemable
+  parent: [BaseC4ContrabandUnredeemable, BoxFolderClipboard] # Frontier: BaseGrandTheftContraband<BaseC2ContrabandUnredeemable
   name: requisition digi-board
   description: A bulky electric clipboard, filled with shipping orders and financing details. With so many compromising documents, you ought to keep this safe.
   components:

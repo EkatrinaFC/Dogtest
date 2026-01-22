@@ -1,5 +1,7 @@
 - type: entity
-  parent: MedalCase
+  parent:
+  - MedalCase
+  - BaseC4Contraband
   id: MedalCaseNfsd
   name: NFSD medal case
   description: This polished oak case hides medals to be given for distinguished service.

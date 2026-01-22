@@ -10,7 +10,9 @@
 - type: entity
   id: FreelanceTrackingImplanter
   name: freelance tracking implanter
-  parent: BaseImplantOnlyImplanterSyndi
+  parent:
+  - BaseImplantOnlyImplanterSyndi
+  - NotContraband
   components:
   - type: Implanter
     implant: FreelanceTrackingImplant
@@ -26,7 +28,9 @@
 - type: entity
   id: GibAcidifierImplanterNF
   name: gib acidifier implanter
-  parent: BaseImplantOnlyImplanterSyndi
+  parent:
+  - BaseImplantOnlyImplanterSyndi
+  - BaseC3Contraband
   components:
   - type: Implanter
     implant: GibAcidifierImplantNF

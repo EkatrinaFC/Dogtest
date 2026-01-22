@@ -27,7 +27,7 @@
 
 - type: entity
   id: NFWeaponPistolCobra
-  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolCybersun ]
+  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolCybersun, BaseC4Contraband ]
   name: cobra
   description: |-
     A rugged, robust operator handgun with inbuilt silencer. An illegal firearm often used by Syndicate agents.
@@ -59,7 +59,7 @@
 
 - type: entity # Coyote: Converted to .40 caliber
   id: NFWeaponPistolUniversalNfsd
-  parent: [ BaseC2ContrabandUnredeemable, CSBaseWeaponHeavyPistolChamber40Overpressure, NFWeaponPistolUniversal ]
+  parent: [ BaseC1ContrabandUnredeemable, CSBaseWeaponHeavyPistolChamber40Overpressure, NFWeaponPistolUniversal ]
   name: mk32-M "Universal" service pistol
   description: |-
     The Mark 32 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'

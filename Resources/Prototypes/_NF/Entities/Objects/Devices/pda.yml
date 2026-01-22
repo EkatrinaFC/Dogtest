@@ -125,7 +125,7 @@
         - Write
 
 - type: entity
-  parent: [BaseSecurityPDA, BaseCommandContraband]
+  parent: [BaseSecurityPDA, BaseC4Contraband]
   id: SheriffPDA
   name: sheriff PDA
   description: Whosoever bears this PDA is the law.
@@ -355,7 +355,7 @@
     state: pda-pal
 
 - type: entity
-  parent: [BaseSecurityPDA, BaseCommandContraband]
+  parent: [BaseSecurityPDA, BaseC4Contraband]
   id: SrPDA
   name: station representative PDA
   description: Looks like it's been clawed on.
@@ -474,7 +474,7 @@
         pda-janitor
 
 - type: entity
-  parent: [CMOPDA, BaseCommandContraband]
+  parent: [CMOPDA, BaseC4Contraband]
   id: DocPDA
   name: director of care PDA
   description: It smells like disinfectant.

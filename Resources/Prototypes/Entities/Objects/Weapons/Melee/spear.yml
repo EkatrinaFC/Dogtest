@@ -160,7 +160,9 @@
 
 - type: entity
   name: uranium spear
-  parent: Spear
+  parent:
+  - Spear
+  - BaseC4ContrabandUnredeemable
   id: SpearUranium
   description: A spear with a uranium shard as a tip.
   components:
@@ -217,7 +219,7 @@
 
 - type: entity
   name: sharkminnow tooth spear
-  parent: Spear 
+  parent: Spear
   id: SpearSharkMinnow
   description: A spear with a sharkminnow tooth as a tip.
   components:

@@ -42,7 +42,7 @@
   - type: IngestionBlocker # Goobstation
 
 - type: entity
-  parent: [ClothingMaskGas, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingMaskGas, BaseC1Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC4Contraband, added ContrabandClothing as parent
   id: ClothingMaskGasSyndicate
   name: syndicate gas mask
   description: A close-fitting tactical mask that can be connected to an air supply.
@@ -82,7 +82,7 @@
         Heat: 0.90 # Frontier 0.80<0.90
 
 - type: entity
-  parent: ClothingMaskGasAtmos # Frontier: removed BaseCommandContraband
+  parent: ClothingMaskGasAtmos # Frontier: removed BaseC4Contraband
   id: ClothingMaskGasCaptain
   name: captain's gas mask
   description: Nanotrasen cut corners and repainted a spare atmospheric gas mask, but don't tell anyone.
@@ -95,7 +95,7 @@
   - type: IngestionBlocker
 
 - type: entity
-  parent: [ ClothingMaskGasAtmos, BaseCentcommContraband ]
+  parent: [ ClothingMaskGasAtmos, BaseC4Contraband ]
   id: ClothingMaskGasCentcom
   name: CentComm gas mask
   description: Oooh, gold and green. Fancy! This should help as you sit in your office.
@@ -242,7 +242,7 @@
     node: mask
 
 - type: entity
-  parent: [ClothingMaskClown, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingMaskClown, NotContraband] # Frontier: BaseSecurityContraband<BaseC1ContrabandUnredeemable
   id: ClothingMaskClownSecurity
   name: security clown wig and mask
   description: A debatably oxymoronic but protective mask and wig.
@@ -373,7 +373,7 @@
     accent: StutteringAccent
 
 - type: entity
-  parent: [ ClothingMaskGas, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ ClothingMaskGas, BaseC1ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC1ContrabandUnredeemable
   id: ClothingMaskGasSwat
   name: swat gas mask
   description: A elite issue Security gas mask.
@@ -421,7 +421,7 @@
     id: ClothingMaskGasMercenary # Frontier
 
 - type: entity
-  parent: [ ClothingMaskGas, BaseCentcommContraband ]
+  parent: [ ClothingMaskGas, BaseC4Contraband ]
   id: ClothingMaskGasERT
   name: ert gas mask
   description: The gas mask of the elite squad of the ERT.

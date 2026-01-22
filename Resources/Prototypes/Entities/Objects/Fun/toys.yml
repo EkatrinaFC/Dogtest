@@ -1481,7 +1481,7 @@
       revolver-ammo: !type:Container
 
 - type: entity
-  parent: [RevolverCapGun, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  parent: [RevolverCapGun, BaseC4Contraband] # Frontier: added BaseC4Contraband
   id: RevolverCapGunFake
   name: cap gun
   suffix: Fake
@@ -1699,7 +1699,7 @@
     modifier: 0.001
 
 - type: entity
-  parent: [PonderingOrb, BaseC3WizardContraband] # Frontier: add BaseC3WizardContraband
+  parent: [PonderingOrb, NotContraband] # Frontier: add NotContraband
   id: PonderingOrbWizard
   name: pondering orb
   description: Ponderous, man... Really ponderous. Magically shows the station's camera network.

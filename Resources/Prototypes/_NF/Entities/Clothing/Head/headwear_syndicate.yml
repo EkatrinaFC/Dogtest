@@ -1,7 +1,7 @@
 # Syndicate Bomb Suit Helmet
 - type: entity
   parent:
-  - BaseC3SyndicateContrabandUnredeemable
+  - BaseC1ContrabandUnredeemable
   - ClothingHeadHelmetBombSuit
   - ContrabandClothing
   id: ClothingHeadHelmetBombSuitSyndie
@@ -18,7 +18,7 @@
 # Syndicate armored bio suit hood
 - type: entity
   parent:
-  - BaseC3SyndicateContrabandUnredeemable
+  - BaseC1ContrabandUnredeemable
   - ClothingHeadHatHoodBioGeneral
   - ContrabandClothing
   id: ClothingHeadHatHoodBioArmoredSyndicate
@@ -48,7 +48,7 @@
 
 - type: entity
   parent:
-  - BaseC3SyndicateContrabandUnredeemable
+  - BaseC3ContrabandUnredeemable
   - ClothingHeadHelmetHardsuitSyndie
   - ContrabandClothing
   id: ClothingHeadHelmetHardsuitSyndieUnremoveable
@@ -58,7 +58,7 @@
 
 - type: entity
   parent:
-  - BaseC3SyndicateContrabandUnredeemable
+  - BaseC3ContrabandUnredeemable
   - ClothingHeadHelmetHardsuitSyndieMedic
   - ContrabandClothing
   id: ClothingHeadHelmetHardsuitSyndieMedicUnremoveable
@@ -68,7 +68,7 @@
 
 - type: entity
   parent:
-  - BaseC3SyndicateContrabandUnredeemable
+  - BaseC1ContrabandUnredeemable
   - ClothingHeadHatHoodWinterSyndie
   - ContrabandClothing
   id: ClothingHeadHatHoodWinterSyndieUnremoveable

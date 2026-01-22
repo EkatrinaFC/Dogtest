@@ -2,7 +2,7 @@
 - type: entity
   id: NFWeaponShotgunBulldog
   parent:
-  - BaseC3SyndicateContraband
+  - BaseC3Contraband
   - NFBaseWeaponShotgunChamber50Magazine
   - NFBaseWeaponFrameShotgunWieldable
   name: Bulldog
@@ -43,7 +43,7 @@
 
 - type: entity
   id: NFWeaponShotgunEnforcer
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ] # Coyote: Add BaseC2ContrabandUnredeemable
+  parent: [ BaseC1ContrabandUnredeemable, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ] # Coyote: Add BaseC2ContrabandUnredeemable
   name: Enforcer
   description: |-
     A premium semi-automatic shotgun, featuring an upgraded tube capacity. On the receiver is a label that says 'for authorized use only.'
@@ -139,7 +139,7 @@
 
 - type: entity
   id: NFWeaponShotgunBlunderbuss
-  parent: [ BaseC3PirateContraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ BaseC1Contraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
   name: blunderbuss
   description: |-
     Deadly at close range, an illegal shotgun often found at the side of a pirate.

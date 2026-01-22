@@ -1,7 +1,7 @@
 - type: entity
   id: Skrungler
   name: skrungler
-  parent: [ BaseC3CultContraband, BaseMachinePowered, ConstructibleMachine ]
+  parent: [ BaseC3Contraband, BaseMachinePowered, ConstructibleMachine ]
   description: A vile machine that produces fuel from dead bodies.
   placement:
     mode: SnapgridCenter

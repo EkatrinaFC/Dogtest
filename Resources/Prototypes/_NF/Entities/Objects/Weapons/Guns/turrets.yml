@@ -6,7 +6,7 @@
   description: |-
    A Contraband Denying Energy Turret (CDET). A disabler turret with built-in microreactor. Use screwdriver to disassemble.
   parent:
-  - BaseC3MetaSec # COYOTE: BaseC2ContrabandUnredeemable -> BaseC3MetaSec
+  - BaseC1ContrabandUnredeemable
   - BaseWeaponTurretEnergyNF
   components:
   - type: HTN
@@ -157,7 +157,7 @@
   name: laser turret
   suffix: Frontier, Syndicate
   parent:
-  - BaseC3SyndicateContraband
+  - BaseC4Contraband
   - BaseTurretSearchBeam
   - BaseWeaponTurretEnergyNF
   categories: [ HideSpawnMenu ]
@@ -308,7 +308,7 @@
   description: |-
    A disassembled and packed Autonomous Sentry Machine Gun Turret (ASMGT). WARNING! Unpacked turret will be hostile towards anyone who wasn't in close proximity (within 3 m) after unpacking!
   parent:
-  - BaseC3Contraband
+  - BaseC2Contraband
   - WeaponTurretAsmgtNtPacked
   components:
   - type: WeaponCaseInsertable

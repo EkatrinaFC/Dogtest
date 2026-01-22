@@ -11,7 +11,7 @@
       - EncryptionKeyCommon
 
 - type: entity
-  parent: [ClothingHeadset, BaseC3MetaSec] # COYOTE: Added BaseC3MetaSec
+  parent: [ClothingHeadset, BaseC4ContrabandUnredeemable] # COYOTE: Added BaseC4ContrabandUnredeemable
   id: ClothingHeadsetNfsdBrown
   name: NFSD headset
   components:
@@ -76,7 +76,7 @@
   categories: [ HideSpawnMenu ]
 
 - type: entity
-  parent: [ClothingHeadsetCommon, ClothingHeadsetCommand]
+  parent: [ClothingHeadsetCommon, ClothingHeadsetCommand, NotContraband]
   id: ClothingHeadsetCommandCommon
   categories: [ HideSpawnMenu ]
 
@@ -130,7 +130,7 @@
 #doc headset
 
 - type: entity
-  parent: [ClothingHeadsetCMO, BaseCommandContraband]
+  parent: [ClothingHeadsetCMO, BaseC4Contraband]
   id: ClothingHeadsetDoc
   name: doc's headset
   description: Letting the DoC know what's up. Takes encryption keys.

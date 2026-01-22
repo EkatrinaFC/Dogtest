@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponRevolverInspector
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverNanotrasen ]
+  parent: [ BaseC1ContrabandUnredeemable, NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverNanotrasen ]
   name: inspector
   description: |-
     A detective's best friend. On the handle is a label that says 'for authorized use only.'
@@ -13,7 +13,7 @@
 
 - type: entity
   id: NFWeaponRevolverWard45
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverNanotrasen ]
+  parent: [ BaseC1ContrabandUnredeemable, NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverNanotrasen ]
   name: ward-45
   description: |-
     The iconic sidearm of the dreaded death squads. On the handle is a label that says 'for authorized use only.'
@@ -54,7 +54,7 @@
 
 - type: entity
   id: NFWeaponRevolverRitland45
-  parent: [ NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverGorlex ]
+  parent: [ NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverGorlex, BaseC1Contraband ]
   name: ritland-45
   description: |-
     An illegal revolver favoured by Syndicate agents.
@@ -66,7 +66,7 @@
 
 - type: entity
   id: NFWeaponRevolverPirate
-  parent: [ NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverSteelbolt ]
+  parent: [ NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverSteelbolt, BaseC1Contraband ]
   name: pirate revolver
   description: |-
     An odd, illegal, old-looking revolver, favoured by pirate crews.
@@ -78,7 +78,7 @@
 
 - type: entity
   id: NFWeaponPistolFlintlock
-  parent: [ NFBaseWeaponRevolverChamber60, NFBaseWeaponFrameRevolverSteelbolt ]
+  parent: [ NFBaseWeaponRevolverChamber60, NFBaseWeaponFrameRevolverSteelbolt, BaseC2Contraband ]
   name: flintlock pistol
   description: |-
     A pirate's companion. Yarrr! An illegal weapon often used by pirates.

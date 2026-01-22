@@ -1,7 +1,7 @@
 #region Rockets
 
 - type: entity
-  parent: [BaseItem, BaseC2ContrabandUnredeemable]
+  parent: [BaseItem, BaseC3ContrabandUnredeemable]
   id: NFBaseCartridgeRocket
   abstract: true
   components:
@@ -26,7 +26,9 @@
   description: A 1.5" warhead designed for GSW rocket launchers. Has tubular shape.
 
 - type: entity
-  parent: NFBaseCartridgeRocket
+  parent:
+  - NFBaseCartridgeRocket
+  - BaseC4ContrabandUnredeemable
   id: NFCartridgeRocketSlow
   name: GR-22 "Easy Pete" grenade
   description: A 1.5" warhead designed for GSW rocket launchers. It's unusually slow.
@@ -80,7 +82,7 @@
     proto: NFBulletGrenadeBlast
 
 - type: entity
-  parent: [ NFBaseGrenade40mm, GrenadeCleanade ]
+  parent: [ NFBaseGrenade40mm, GrenadeCleanade, NotContraband ]
   id: NFGrenadeCleanade
   name: cleanade grenade round
   components:
@@ -149,7 +151,9 @@
     proto: NFPelletGlassSpread
 
 - type: entity
-  parent: BaseCannonBall
+  parent:
+  - BaseCannonBall
+  - BaseC2Contraband
   id: NFCannonBallEmp
   name: shockshot
   suffix: EMP

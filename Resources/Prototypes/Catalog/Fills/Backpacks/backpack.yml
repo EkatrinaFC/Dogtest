@@ -7,7 +7,9 @@
     tags: [] # ignore "WhitelistChameleon" tag
 
 - type: entity
-  parent: ClothingBackpackSyndicateBundle
+  parent:
+  - ClothingBackpackSyndicateBundle
+  - BaseC3Contraband
   id: ClothingBackpackSyndicateRaidBundle
   name: syndicate raid suit bundle
   description: "Contains the Syndicate's durable raid armor suit."

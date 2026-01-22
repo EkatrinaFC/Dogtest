@@ -23,7 +23,7 @@
 - type: entity
   abstract: true # Frontier: use NF variant
   name: china lake
-  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3Contraband
+  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseC4Contraband] # Frontier: BaseSyndicateContraband<BaseC3Contraband
   id: WeaponLauncherChinaLake
   description: PLOOP.
   components:
@@ -56,7 +56,7 @@
 
 - type: entity
   abstract: true # Frontier: create NF variant if we want this
-  parent: [ BaseWeaponLauncher, BaseGunWieldable, BaseC3Contraband ] # Frontier: BaseMajorContraband<BaseC3SyndicateContraband
+  parent: [ BaseWeaponLauncher, BaseGunWieldable, BaseC3Contraband ] # Frontier: BaseMajorContraband<BaseC4Contraband
   id: WeaponLauncherHydra
   name: hydra
   description: PLOOP... FSSSSSS

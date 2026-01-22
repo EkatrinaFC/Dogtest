@@ -226,7 +226,9 @@
 - type: entity
   id: NFCartridgeRifle25Incendiary
   name: cartridge (.25 rifle, incendiary)
-  parent: NFBaseCartridgeRifle25
+  parent:
+  - NFBaseCartridgeRifle25
+  - BaseC2Contraband
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle25Incendiary
@@ -241,7 +243,9 @@
 - type: entity
   id: NFCartridgeRifle25Uranium
   name: cartridge (.25 rifle, uranium)
-  parent: NFBaseCartridgeRifle25
+  parent:
+  - NFBaseCartridgeRifle25
+  - BaseC4Contraband
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle25Uranium

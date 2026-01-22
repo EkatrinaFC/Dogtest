@@ -146,7 +146,9 @@
 - type: entity
   id: NFMagazineRifle20Incendiary
   name: magazine (.20 rifle, incendiary)
-  parent: NFBaseMagazineRifle20
+  parent:
+  - NFBaseMagazineRifle20
+  - BaseC2Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle20Incendiary
@@ -172,7 +174,9 @@
 - type: entity
   id: NFMagazineRifle20Uranium
   name: magazine (.20 rifle, uranium)
-  parent: NFBaseMagazineRifle20
+  parent:
+  - NFBaseMagazineRifle20
+  - BaseC4Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle20Uranium

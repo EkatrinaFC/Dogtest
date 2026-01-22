@@ -1,6 +1,6 @@
 - type: entity
   name: station representative's rubber stamp
-  parent: [RubberStampHop, BaseCommandContraband]
+  parent: [RubberStampHop, BaseC4Contraband]
   id: RubberStampSr
   components:
   - type: Stamp
@@ -27,7 +27,7 @@
 
 - type: entity
   name: sheriff's rubber stamp
-  parent: [RubberStampBase, BaseCommandContraband]
+  parent: [RubberStampBase, BaseC4Contraband]
   id: RubberStampSheriff
   categories: [ DoNotMap ]
   components:
@@ -82,7 +82,7 @@
 
 - type: entity
   name: director of care's rubber stamp
-  parent: [RubberStampBase, BaseCommandContraband]
+  parent: [RubberStampBase, BaseC4Contraband]
   id: RubberStampDoc
   categories: [ DoNotMap ]
   components:
@@ -110,7 +110,7 @@
 
 - type: entity
   name: plant manager's rubber stamp
-  parent: [RubberStampBase, BaseCommandContraband]
+  parent: [RubberStampBase, BaseC4Contraband]
   id: RubberStampPlantManager
   categories: [ DoNotMap ]
   components:

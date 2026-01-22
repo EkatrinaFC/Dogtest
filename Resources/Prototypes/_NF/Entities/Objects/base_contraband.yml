@@ -12,6 +12,15 @@
     allowedDepartments: [ Civilian, Security, Command, Frontier, CentralCommand ]
 
 - type: entity
+  id: BaseC1ContrabandUnredeemable
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class1
+    # Pretty much everyone.
+    allowedDepartments: [ Civilian, Security, Command, Frontier, CentralCommand ]
+
+- type: entity
   parent: BaseC1Contraband
   id: BaseClearContraband
   abstract: true
@@ -232,3 +241,31 @@
       Doubloon: 1
     hideCarryStatus: true
 # endregion
+
+- type: entity
+  id: BaseC4ContrabandUnredeemable
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class4General
+
+- type: entity
+  id: BaseC4Contraband
+  parent: BaseC4ContrabandUnredeemable
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class4General
+    turnInValues:
+      FrontierUplinkCoin: 2
+      Doubloon: 2
+
+- type: entity
+  id: NotContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: NotContraband
+  - type: UnContraband
+
+

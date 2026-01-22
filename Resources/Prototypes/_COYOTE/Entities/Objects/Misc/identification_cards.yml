@@ -1,6 +1,6 @@
 - type: entity
   name: Pilot ID card # Frontier: passenger<resident
-  parent: [IDCardStandard, BaseC3PirateContraband]
+  parent: [IDCardStandard, NotContraband]
   id: SmugglerIDCard
   suffix: Coyote
   categories: [ HideSpawnMenu ] # Coyote

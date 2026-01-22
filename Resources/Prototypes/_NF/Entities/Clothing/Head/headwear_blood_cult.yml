@@ -1,8 +1,7 @@
 - type: entity
   parent:
-  - BaseC3CultContrabandUnredeemable
+  - BaseC1ContrabandUnredeemable
   - ClothingHeadHelmetBasic
-  - BaseC3CultContraband
   - ContrabandClothing
   id: ClothingHeadHelmetCultJanitor
   name: cult janitor helmet
@@ -17,9 +16,8 @@
 
 - type: entity
   parent:
-  - BaseC3CultContrabandUnredeemable
+  - BaseC1ContrabandUnredeemable
   - ClothingHeadBase
-  - BaseC3CultContraband
   - ContrabandClothing
   id: ClothingHeadHatHoodBloodCulthood
   name: cult hood
@@ -34,7 +32,7 @@
     - Hair
 
 - type: entity # for looks only
-  parent: [ ClothingHeadHatHoodBloodCulthood, ClothingHeadHelmetBasic, BaseC3CultContraband, ContrabandClothing ]
+  parent: [ ClothingHeadHatHoodBloodCulthood, ClothingHeadHelmetBasic, BaseC1Contraband, ContrabandClothing ]
   id: ClothingHeadHatHoodBloodCulthoodUnremoveable
   categories: [ HideSpawnMenu ]
   name: cult hood

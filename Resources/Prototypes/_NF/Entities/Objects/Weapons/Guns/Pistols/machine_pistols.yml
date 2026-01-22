@@ -1,7 +1,9 @@
 #region WizDen
 - type: entity # Coyote: Converted to .40 caliber
   id: NFWeaponPistolEchis
-  parent: CSBaseWeaponFrameHeavyMachinePistolGorlex
+  parent:
+  - CSBaseWeaponFrameHeavyMachinePistolGorlex
+  - BaseC2Contraband
   name: echis
   description: |-
     A viper for use by cyborgs. Creates .40 ammo on the fly from an internal ammo fabricator, which slowly self-charges.
@@ -25,7 +27,7 @@
 
 - type: entity # Coyote: Converted to .40 caliber
   id: NFWeaponPistolViper
-  parent: [ CSBaseWeaponHeavyPistolChamber40, CSBaseWeaponFrameHeavyMachinePistolGorlex ]
+  parent: [ CSBaseWeaponHeavyPistolChamber40, CSBaseWeaponFrameHeavyMachinePistolGorlex, BaseC1Contraband ]
   name: viper
   description: |-
     A small, easily concealable machine pistol. An illegal firearm often used by Syndicate agents.

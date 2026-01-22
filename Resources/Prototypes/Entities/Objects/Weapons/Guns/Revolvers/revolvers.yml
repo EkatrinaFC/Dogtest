@@ -124,7 +124,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: Python
-  parent: [BaseWeaponRevolver, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseWeaponRevolver, BaseC4Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: WeaponRevolverPython
   description: A powerful double-action revolver manufactured by the Syndicate. Loud and flashy, perfect for any agent looking to make a statement. Loads 6 rounds of .45 magnum.
   components:
@@ -161,7 +161,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: pirate revolver
-  parent: [BaseWeaponRevolver, BaseC3PirateContraband] # Frontier: BaseMinorContraband<BaseC3PirateContraband
+  parent: [BaseWeaponRevolver, BaseC3Contraband] # Frontier: BaseMinorContraband<BaseC3Contraband
   id: WeaponRevolverPirate
   description: A crude single-action revolver handmade by a space pirate. Old and covered in rust, it somehow still works. Loads 5 rounds of .45 magnum.
   components:
@@ -189,4 +189,4 @@
     capacity: 5
     chambers: [ null, null, null, null, null ]
     ammoSlots: [ null, null, null, null, null ]
-    
+

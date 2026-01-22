@@ -70,7 +70,7 @@
     sprite: Clothing/Ears/Headsets/mining.rsi
 
 - type: entity
-  parent: ClothingHeadsetCargo # Frontier: remove BaseCommandContraband
+  parent: ClothingHeadsetCargo # Frontier: remove BaseC4Contraband
   id: ClothingHeadsetQM
   name: qm headset
   description: A headset used by the quartermaster.
@@ -83,7 +83,7 @@
       - EncryptionKeyCommon
 
 - type: entity
-  parent: [ ClothingHeadset, BaseCentcommCommandContraband ] # Frontier: Added BaseCentcommCommandContraband, removed BaseCentcommContraband.
+  parent: [ ClothingHeadset, BaseC4Contraband ] # Frontier: Added BaseC4Contraband, removed BaseC4Contraband.
   id: ClothingHeadsetCentCom
   name: CentComm headset
   description: A headset used by the upper echelons of Nanotrasen.
@@ -130,7 +130,7 @@
     sprite: Clothing/Ears/Headsets/engineering.rsi
 
 - type: entity
-  parent: ClothingHeadsetEngineering # Frontier: removed BaseCommandContraband
+  parent: ClothingHeadsetEngineering # Frontier: removed BaseC4Contraband
   id: ClothingHeadsetCE
   name: ce headset
   description: A headset for the chief engineer to ignore all emergency calls on.
@@ -159,7 +159,7 @@
     sprite: Clothing/Ears/Headsets/medical.rsi
 
 - type: entity
-  parent: ClothingHeadsetMedical # Frontier: removed BaseCommandContraband
+  parent: ClothingHeadsetMedical # Frontier: removed BaseC4Contraband
   id: ClothingHeadsetCMO
   name: cmo headset
   description: A headset used by the CMO.
@@ -220,7 +220,7 @@
     sprite: Clothing/Ears/Headsets/robotics.rsi
 
 - type: entity
-  parent: ClothingHeadsetScience # Frontier: removed BaseCommandContraband
+  parent: ClothingHeadsetScience # Frontier: removed BaseC4Contraband
   id: ClothingHeadsetRD
   name: rd headset
   description: Lamarr used to love chewing on this...
@@ -233,7 +233,7 @@
       - EncryptionKeyCommon
 
 - type: entity
-  parent: [ClothingHeadset, BaseC3MetaSec] # Frontier: BaseSecurityLawyerContraband<BaseC2ContrabandUnredeemable # COYOTE: BaseC2ContrabandUnredeemable -> BaseC3MetaSec
+  parent: [ClothingHeadset, NotContraband] # Frontier: BaseSecurityLawyerContraband<BaseC2ContrabandUnredeemable # COYOTE: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingHeadsetSecurity
   name: security headset
   description: This is used by your elite security force.
@@ -249,7 +249,7 @@
     sprite: Clothing/Ears/Headsets/security.rsi
 
 - type: entity
-  parent: [ClothingHeadset, BaseC3MetaSec] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable # COYOTE: BaseC2ContrabandUnredeemable -> BaseC3MetaSec
+  parent: [ClothingHeadset, BaseC4ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable # COYOTE: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingHeadsetBrigmedic
   name: brigmedic headset
   description: A headset that helps to hear the death cries.
@@ -282,7 +282,7 @@
     sprite: Clothing/Ears/Headsets/service.rsi
 
 - type: entity
-  parent: [ClothingHeadset, BaseC3MetaPirate] # Frontier: add BaseC3Contraband, ContrabandClothing #Coyote: Removes C3 Contraband and Contraband Clothing, changes c3 to c3meta
+  parent: [ClothingHeadset, NotContraband] # Frontier: add BaseC3Contraband, ContrabandClothing #Coyote: Removes C3 Contraband and Contraband Clothing, changes c3 to c3meta
   id: ClothingHeadsetFreelance
   name: freelancer headset
   description: This is used by a roaming group of freelancers.
@@ -297,7 +297,7 @@
       sprite: Clothing/Ears/Headsets/freelance.rsi
 
 - type: entity
-  parent: [ClothingHeadset, BaseC3WizardContraband, ContrabandClothing] # Frontier: BaseMagicalContraband<BaseC3WizardContraband, add ContrabandClothing
+  parent: [ClothingHeadset, NotContraband, ContrabandClothing] # Frontier: BaseMagicalContraband<NotContraband, add ContrabandClothing
   id: ClothingHeadsetWizard
   name: wizard headset
   description: A headset used by the dreaded space wizards.

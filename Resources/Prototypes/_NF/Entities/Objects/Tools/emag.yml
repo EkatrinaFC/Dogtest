@@ -15,7 +15,7 @@
     size: Tiny
 
 - type: entity
-  parent: [BaseItem, BaseCommandContraband]
+  parent: [BaseItem, BaseC4Contraband]
   id: DemagUnlimited
   name: cryptographic resequencer
   suffix: Unlimited
@@ -39,7 +39,7 @@
   - type: AutoRecharge
 
 - type: entity
-  parent: [BaseItem, BaseC3PirateContraband]
+  parent: [BaseItem, BaseC4Contraband]
   id: PmagUnlimited
   name: machine liberator
   suffix: Unlimited

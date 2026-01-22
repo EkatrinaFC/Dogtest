@@ -133,7 +133,9 @@
 - type: entity
   id: CSMagazinePistol40Uranium
   name: pistol magazine (.40 pistol, uranium)
-  parent: CSBaseMagazinePistol40
+  parent:
+  - CSBaseMagazinePistol40
+  - BaseC4Contraband
   components:
   - type: BallisticAmmoProvider
     proto: CSCartridgePistol40Uranium
@@ -278,7 +280,9 @@
 - type: entity
   id: CSMagazineSubMachineGun40Incendiary
   name: smg magazine (.40 pistol, incendiary)
-  parent: CSBaseMagazinePistolSubMachineGun40
+  parent:
+  - CSBaseMagazinePistolSubMachineGun40
+  - BaseC2Contraband
   components:
   - type: BallisticAmmoProvider
     proto: CSCartridgePistol40Incendiary
@@ -304,7 +308,9 @@
 - type: entity
   id: CSMagazineSubMachineGun40Uranium
   name: smg magazine (.40 pistol, uranium)
-  parent: CSBaseMagazinePistolSubMachineGun40
+  parent:
+  - CSBaseMagazinePistolSubMachineGun40
+  - BaseC4Contraband
   components:
   - type: BallisticAmmoProvider
     proto: CSCartridgePistol40Uranium

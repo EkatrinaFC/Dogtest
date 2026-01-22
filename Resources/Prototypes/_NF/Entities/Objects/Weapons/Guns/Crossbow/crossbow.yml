@@ -294,7 +294,7 @@
 
 - type: entity
   id: CrossbowBloodCult
-  parent: [ BaseCrossbowWieldable, BaseC3CultContraband ]
+  parent: [ BaseCrossbowWieldable, BaseC1Contraband ]
   name: blood cult crossbow
   components:
   - type: Sprite
@@ -335,7 +335,7 @@
 
 - type: entity
   id: CrossbowBloodCultHand
-  parent: [ NFBaseWeaponEncumbranceCrossbowHand, BaseCrossbow, BaseC3CultContraband ]
+  parent: [ NFBaseWeaponEncumbranceCrossbowHand, BaseCrossbow, BaseC1Contraband ]
   name: blood cult hand crossbow
   components:
   - type: Sprite

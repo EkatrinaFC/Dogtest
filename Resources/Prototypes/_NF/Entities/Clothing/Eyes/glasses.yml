@@ -1,7 +1,7 @@
 - type: entity
   id: ClothingEyesArcadiaVisor
   name: arcadia visor
-  parent: [ ClothingEyesBase, BaseC3ContrabandNoValue, ContrabandClothing ]
+  parent: [ ClothingEyesBase, BaseC1ContrabandUnredeemable, ContrabandClothing ]
   description: A visor produced by Arcadia Industries, with some high tech optics systems built in.
   components:
   - type: Sprite
@@ -27,7 +27,9 @@
   - type: VisionCorrection
 
 - type: entity
-  parent: ClothingEyesGlassesSecurity
+  parent:
+  - ClothingEyesGlassesSecurity
+  - BaseC4Contraband
   id: ClothingEyesGlassesNfsd
   name: NFSD glasses
   description: Upgraded sunglasses that provide flash immunity and a security HUD.
@@ -38,7 +40,7 @@
     sprite: _NF/Clothing/Eyes/Glasses/nfsd_glasses.rsi
 
 - type: entity
-  parent: [ClothingEyesGlassesMeson, BaseCommandContraband]
+  parent: [ClothingEyesGlassesMeson, BaseC4Contraband]
   id: ClothingEyesGlassesMesonPlantManager
   name: plant manager's goggles
   description: Green-tinted protective goggles with an integrated HUD for crew identification.

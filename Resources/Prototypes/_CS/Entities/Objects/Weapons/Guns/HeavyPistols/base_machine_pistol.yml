@@ -25,7 +25,7 @@
 #region manufacturer
 - type: entity
   id: CSBaseWeaponFrameHeavyMachinePistolGorlex
-  parent: [ BaseC3SyndicateContraband, CSBaseWeaponFrameHeavyMachinePistol ]
+  parent: [ BaseC4Contraband, CSBaseWeaponFrameHeavyMachinePistol ]
   abstract: true
   components:
   - type: Gun

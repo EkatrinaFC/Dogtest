@@ -3,7 +3,7 @@
 
 # region Tiered Weapons
 - type: entity
-  parent: BaseC2ExpeditionContraband
+  parent: BaseC2Contraband
   id: BaseExpeditionWeaponTier1
   abstract: true
   components:
@@ -11,7 +11,7 @@
     price: 1000
 
 - type: entity
-  parent: BaseC2ExpeditionContraband
+  parent: BaseC2Contraband
   id: BaseExpeditionWeaponTier2
   abstract: true
   components:
@@ -19,7 +19,7 @@
     price: 2000
 
 - type: entity
-  parent: BaseC2ExpeditionContraband
+  parent: BaseC2Contraband
   id: BaseExpeditionWeaponTier3
   abstract: true
   components:
@@ -27,7 +27,7 @@
     price: 3000
 
 - type: entity
-  parent: BaseC2ExpeditionContraband
+  parent: BaseC2Contraband
   id: BaseExpeditionWeaponTier4
   abstract: true
   components:
@@ -45,49 +45,49 @@
 # For syndicate/pirate labeled guns
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - BaseC4Contraband
   - BaseExpeditionWeaponTier1
   id: BaseExpeditionWeaponTier1Syndicate
   abstract: true
 
 - type: entity
   parent:
-  - BaseC3PirateContraband
+  - BaseC3Contraband
   - BaseExpeditionWeaponTier2
   id: BaseExpeditionWeaponTier2Pirate
   abstract: true
 
 - type: entity
   parent:
-  - BaseC3PirateContraband
+  - BaseC3Contraband
   - BaseExpeditionWeaponTier3
   id: BaseExpeditionWeaponTier3Pirate
   abstract: true
 
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - BaseC4Contraband
   - BaseExpeditionWeaponTier2
   id: BaseExpeditionWeaponTier2Syndicate
   abstract: true
 
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - BaseC4Contraband
   - BaseExpeditionWeaponTier3
   id: BaseExpeditionWeaponTier3Syndicate
   abstract: true
 
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - BaseC4Contraband
   - BaseExpeditionWeaponTier4
   id: BaseExpeditionWeaponTier4Syndicate
   abstract: true
 
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - BaseC4Contraband
   - BaseExpeditionWeaponTier5
   id: BaseExpeditionWeaponTier5Syndicate
   abstract: true
@@ -105,6 +105,7 @@
   parent:
   - BaseExpeditionWeaponTier1
   - NFWeaponPistolPollockHighCapacityMag
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponPistolPollockExpedition
 
@@ -112,6 +113,7 @@
   parent:
   - BaseExpeditionWeaponTier1
   - NFWeaponPistolUniversal
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponPistolUniversalExpedition
 
@@ -120,6 +122,7 @@
   parent:
   - BaseExpeditionWeaponTier1
   - NFWeaponRevolverArgenti
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverArgentiExpedition
 
@@ -127,6 +130,7 @@
   parent:
   - BaseExpeditionWeaponTier1
   - NFWeaponRevolverFaith
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverFaithExpedition
 
@@ -134,6 +138,7 @@
   parent:
   - BaseExpeditionWeaponTier1
   - NFWeaponRevolverDeckard
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverDeckardExpedition
 
@@ -141,6 +146,7 @@
   parent:
   - BaseExpeditionWeaponTier1Syndicate
   - NFWeaponRevolverRitland45
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverRitland45Expedition
 
@@ -149,6 +155,7 @@
   parent:
   - BaseExpeditionWeaponTier1Syndicate
   - NFWeaponRifleBarlowsBolt
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleBarlowsBoltExpedition
 
@@ -156,6 +163,7 @@
   parent:
   - BaseExpeditionWeaponTier1
   - NFWeaponRifleCeremonial
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleCeremonialExpedition
 
@@ -172,6 +180,7 @@
   parent:
   - BaseExpeditionWeaponTier2Syndicate
   - NFWeaponPistolCobra
+  - BaseC4Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponPistolCobraExpedition
 
@@ -186,6 +195,7 @@
   parent:
   - BaseExpeditionWeaponTier2Syndicate
   - NFWeaponPistolViper
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponPistolViperExpedition
 
@@ -194,6 +204,7 @@
   parent:
   - BaseExpeditionWeaponTier2
   - NFWeaponRevolverFitz
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverFitzExpedition
 
@@ -201,6 +212,7 @@
   parent:
   - BaseExpeditionWeaponTier2
   - NFWeaponRevolverLucky
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverLuckyExpedition
 
@@ -215,6 +227,7 @@
   parent:
   - BaseExpeditionWeaponTier2
   - NFWeaponRevolverWard45
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverWard45Expedition
 
@@ -223,6 +236,7 @@
   parent:
   - BaseExpeditionWeaponTier2
   - NFWeaponShotgunKammerer
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponShotgunKammererExpedition
 
@@ -231,6 +245,7 @@
   parent:
   - BaseExpeditionWeaponTier2Syndicate
   - NFWeaponSubMachineGunC20r
+  - BaseC2Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponSubMachineGunC20rExpedition
 
@@ -261,6 +276,7 @@
   parent:
   - BaseExpeditionWeaponTier2
   - NFWeaponRifleSVS
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleSVSExpedition
 
@@ -269,6 +285,7 @@
   parent:
   - BaseExpeditionWeaponTier2
   - NFWeaponEnergyPistolLaser
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponEnergyPistolLaserExpedition
 
@@ -285,6 +302,7 @@
   parent:
   - BaseExpeditionWeaponTier3Syndicate
   - NFWeaponRifleAssaultM90GrenadeLauncher
+  - BaseC2Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultM90GrenadeLauncherExpedition
 
@@ -293,6 +311,7 @@
   parent:
   - BaseExpeditionWeaponTier3Syndicate
   - NFWeaponRifleSniperHristov
+  - BaseC3Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleSniperHristovExpedition
 
@@ -300,6 +319,7 @@
   parent:
   - BaseExpeditionWeaponTier3Pirate
   - NFWeaponRifleMusket
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleMusketExpedition
 
@@ -337,6 +357,7 @@
   parent:
   - BaseExpeditionWeaponTier3
   - NFWeaponEnergyPistolLaserSvalinn
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponEnergyPistolLaserSvalinnExpedition
 
@@ -346,6 +367,7 @@
   parent:
   - BaseExpeditionWeaponTier4
   - NFWeaponShotgunEnforcer
+  - BaseC1Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponShotgunEnforcerExpedition
 
@@ -353,6 +375,7 @@
   parent:
   - BaseExpeditionWeaponTier4Syndicate
   - NFWeaponShotgunBulldog
+  - BaseC3Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponShotgunBulldogExpedition
 
@@ -361,6 +384,7 @@
   parent:
   - BaseExpeditionWeaponTier4Syndicate
   - NFWeaponRifleAssaultSm
+  - BaseC2Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultSmExpedition
 
@@ -390,6 +414,7 @@
   parent:
   - BaseExpeditionWeaponTier4
   - NFWeaponEnergyPistolLaserAntique
+  - BaseC2Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponEnergyPistolLaserAntiqueExpedition
 
@@ -414,6 +439,7 @@
   parent:
   - BaseExpeditionWeaponTier5Syndicate
   - NFWeaponLauncherChinaLake
+  - BaseC3Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponLauncherChinaLakeExpedition
 
@@ -422,6 +448,7 @@
   parent:
   - BaseExpeditionWeaponTier5Syndicate
   - NFWeaponLightMachineGunL6
+  - BaseC3Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponLightMachineGunL6Expedition
 
@@ -430,6 +457,7 @@
   parent:
   - BaseExpeditionWeaponTier5
   - NFWeaponEnergySubMachineGunDeltaV
+  - BaseC2Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponEnergySubMachineGunDeltaVExpedition
 
@@ -437,6 +465,7 @@
   parent:
   - BaseExpeditionWeaponTier5
   - NFWeaponEnergyRifleSniperXrayCannon
+  - BaseC4Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponEnergyRifleSniperXrayCannonExpedition
 
@@ -444,6 +473,7 @@
   parent:
   - BaseExpeditionWeaponTier5
   - NFWeaponEnergyRifleSniperCannon
+  - BaseC2Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponEnergyRifleSniperCannonExpedition
 
@@ -451,5 +481,6 @@
   parent:
   - BaseExpeditionWeaponTier5
   - NFWeaponEnergyRifleTemperature
+  - BaseC2Contraband
   categories: [ HideSpawnMenu ]
   id: NFWeaponEnergyRifleTemperatureExpedition

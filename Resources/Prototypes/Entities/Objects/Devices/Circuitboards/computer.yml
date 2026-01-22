@@ -365,7 +365,7 @@
       prototype: ComputerWallmountCrewMonitoring # Frontier
 
 - type: entity
-  parent: [BaseComputerCircuitboard, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [BaseComputerCircuitboard, BaseC4ContrabandUnredeemable] # Frontier: BaseC4Contraband<BaseC2ContrabandUnredeemable
   id: IDComputerCircuitboard
   name: ID card computer board
   description: A computer printed circuit board for an ID card console.
@@ -397,7 +397,7 @@
       prototype: ComputerTabletopBodyScanner # Frontier
 
 - type: entity
-  parent: [BaseComputerCircuitboard, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [BaseComputerCircuitboard, BaseC3ContrabandUnredeemable] # Frontier: BaseC4Contraband<BaseC2ContrabandUnredeemable
   id: CommsComputerCircuitboard
   name: communications computer board
   description: A computer printed circuit board for a communications console.
@@ -410,7 +410,7 @@
       prototype: ComputerTabletopComms # Frontier
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ BaseComputerCircuitboard, BaseC4Contraband ] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: SyndicateCommsComputerCircuitboard
   name: syndicate communications computer board
   description: A computer printed circuit board for a syndicate communications console.
@@ -423,7 +423,7 @@
       prototype: SyndicateComputerTabletopComms # Frontier
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ BaseComputerCircuitboard, BaseC4Contraband ] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: FreelancerCommsComputerCircuitboard
   name: freelancer communications computer board
   description: A computer printed circuit board for a freelancer communications console.
@@ -436,7 +436,7 @@
     prototype: FreelancerComputerTabletopComms # Frontier
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseC3WizardContraband ] # Frontier: BaseSyndicateContraband<BaseC3WizardContraband
+  parent: [ BaseComputerCircuitboard, BaseC3Contraband ] # Frontier: BaseSyndicateContraband<NotContraband
   id: WizardCommsComputerCircuitboard
   name: wizard communications computer board
   description: A computer printed circuit board for a wizard communications console.
@@ -447,7 +447,7 @@
     prototype: WizardComputerComms
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseCentcommContraband ]
+  parent: [ BaseComputerCircuitboard, BaseC4Contraband ]
   id: CentcommCommsComputerCircuitboard
   name: central command communications computer board
   description: A computer printed circuit board for a central command communications console.
@@ -547,7 +547,7 @@
       prototype: ComputerTabletopShuttle # Frontier
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
+  parent: [ BaseComputerCircuitboard, NotContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: SyndicateShuttleConsoleCircuitboard
   name: syndicate shuttle console board
   description: A computer printed circuit board for a syndicate shuttle console.
@@ -572,7 +572,7 @@
       prototype: ComputerTabletopCloningConsole # Frontier
 
 - type: entity
-  parent: [BaseComputerCircuitboard, BaseC3Contraband]
+  parent: [BaseComputerCircuitboard, NotContraband]
   id: ComputerIFFCircuitboard
   name: IFF console board
   description: Allows you to control the IFF characteristics of this vessel.
@@ -585,7 +585,7 @@
       prototype: ComputerTabletopIFF # Frontier
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
+  parent: [ BaseComputerCircuitboard, BaseC4Contraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: ComputerIFFSyndicateCircuitboard
   name: syndicate IFF console board
   description: Allows you to control the IFF and stealth characteristics of this vessel.

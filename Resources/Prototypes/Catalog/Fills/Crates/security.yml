@@ -11,7 +11,9 @@
 
 - type: entity
   id: CrateSecurityHelmet
-  parent: CrateSecgear
+  parent:
+  - CrateSecgear
+  - NotContraband
   name: helmet crate
   description: Contains three standard-issue brain buckets. Requires Security access to open.
   components:
@@ -22,7 +24,9 @@
 
 - type: entity
   id: CrateSecurityNonlethal
-  parent: CrateSecgear
+  parent:
+  - CrateSecgear
+  - NotContraband
   name: nonlethals crate
   description: Contains a mix of disablers, stun batons, and flashes. Requires Security access to open.
   components:
@@ -40,7 +44,9 @@
 
 - type: entity
   id: CrateSecuritySupplies
-  parent: CrateSecgear
+  parent:
+  - CrateSecgear
+  - NotContraband
   name: security supplies crate
   description: Contains various supplies for the station's Security team. Requires Security access to open.
   components:
@@ -54,7 +60,9 @@
 
 - type: entity
   id: CrateRestraints
-  parent: CrateSecgear
+  parent:
+  - CrateSecgear
+  - NotContraband
   name: restraints crate
   description: Contains two boxes each of handcuffs and zipties. Requires Security access to open.
   components:
@@ -67,7 +75,9 @@
 
 - type: entity
   id: CrateSecurityBiosuit
-  parent: CrateSecgear
+  parent:
+  - CrateSecgear
+  - NotContraband
   name: security bio suit crate
   description: Contains 2 biohazard suits to ensure that no disease will distract you from your duties. Requires Security access to open.
   components:
@@ -84,7 +94,9 @@
   id: CrateSecurityTrackingMindshieldImplants
   name: implanter crate
   description: Contains 4 MindShield implants and 4 tracking implant. Requires Security access to open.
-  parent: CrateSecgear
+  parent:
+  - CrateSecgear
+  - NotContraband
   components:
   - type: StorageFill
     contents:
@@ -94,7 +106,9 @@
         amount: 4
 
 - type: entity
-  parent: CrateSecgear
+  parent:
+  - CrateSecgear
+  - NotContraband
   id: CrateSecNonlethalThrowables
   name: nonlethal throwables crate
   description: Contains one box each of flashbangs, stingers, tear gas grenades, and four bolas. Requires Security access to open.

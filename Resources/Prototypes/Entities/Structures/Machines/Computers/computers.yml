@@ -266,7 +266,7 @@
     stealGroup: CargoShuttleConsoleCircuitboard
 
 - type: entity
-  parent: [BaseComputerAiAccess, BaseC3Contraband]
+  parent: [BaseComputerAiAccess, NotContraband]
   id: ComputerIFF
   name: IFF computer
   description: Allows you to control the IFF characteristics of this vessel.
@@ -297,7 +297,7 @@
     board: ComputerIFFCircuitboard
 
 - type: entity
-  parent: [ComputerIFF, BaseC3SyndicateContraband]
+  parent: [ComputerIFF, BaseC4Contraband]
   id: ComputerIFFSyndicate
   name: IFF computer
   suffix: Syndicate

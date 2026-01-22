@@ -336,7 +336,7 @@
 
 - type: entity
   id: PortableGeneratorDKMachineCircuitboard
-  parent: [ BaseMachineCircuitboard, BaseC2ContrabandUnredeemable ]
+  parent: [ BaseMachineCircuitboard, NotContraband ]
   name: D-K portable generator machine board
   description: A machine printed circuit board for a D-K-type portable generator.
   components:
@@ -492,7 +492,7 @@
 
 - type: entity
   id: PirateStitcherCircuitboard
-  parent: [UniformPrinterMachineCircuitboard, BaseC3PirateContrabandNoValue]
+  parent: [UniformPrinterMachineCircuitboard, NotContraband]
   name: pirate stitcher machine board
   description: Clearly brand new.
   components:

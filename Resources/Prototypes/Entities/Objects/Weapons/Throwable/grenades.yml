@@ -43,7 +43,7 @@
 - type: entity
   name: explosive grenade
   description: Grenade that creates a small but devastating explosion.
-  parent: [GrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [GrenadeBase, BaseC3Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: ExGrenade
   components:
   - type: ExplodeOnTrigger
@@ -109,7 +109,7 @@
 - type: entity
   name: syndicate minibomb
   description: A syndicate-manufactured explosive used to stow destruction and cause chaos.
-  parent: [GrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [GrenadeBase, BaseC3Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: SyndieMiniBomb
   components:
   - type: Sprite
@@ -170,7 +170,7 @@
 
 
 - type: entity
-  parent: [ GrenadeBase, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ GrenadeBase, BaseC4Contraband ] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: SingularityGrenade
   name: singularity grenade
   description: Grenade that simulates the power of a singularity, pulling things in a heap.
@@ -277,7 +277,7 @@
 - type: entity
   name: the nuclear option
   description: Please don't throw it, think of the children.
-  parent: [GrenadeBase, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  parent: [GrenadeBase, BaseC4Contraband] # Frontier: added BaseC4Contraband
   id: NuclearGrenade
   components:
   - type: Sprite
@@ -356,7 +356,7 @@
 - type: entity
   name: EMP grenade
   description: A grenade designed to wreak havoc on electronic systems.
-  parent: [GrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [GrenadeBase, BaseC2Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: EmpGrenade
   components:
   - type: Sprite
@@ -373,7 +373,7 @@
 - type: entity
   name: holy hand grenade
   description: O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy.
-  parent: [GrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [GrenadeBase, BaseC4Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: HolyHandGrenade
   components:
   - type: Sprite
@@ -396,7 +396,7 @@
       path: /Audio/Effects/hallelujah.ogg
 
 - type: entity
-  parent: [ GrenadeBase, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ GrenadeBase, BaseC1ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: SmokeGrenade
   name: smoke grenade
   description: A tactical grenade that releases a large, long-lasting cloud of smoke when used.
@@ -414,7 +414,9 @@
       path: /Audio/Items/smoke_grenade_prime.ogg
 
 - type: entity
-  parent: SmokeGrenade # Frontier: removed BaseCivilianContraband
+  parent:
+  - SmokeGrenade
+  - NotContraband # Frontier: removed BaseCivilianContraband
   id: CleanerGrenade
   name: cleanade
   description: Special grenade for janitors, releasing large cloud of space cleaner foam.
@@ -432,7 +434,9 @@
   - type: NFCleanade # Frontier
 
 - type: entity
-  parent: SmokeGrenade
+  parent:
+  - SmokeGrenade
+  - BaseC3Contraband
   id: TearGasGrenade
   name: tear gas grenade
   description: A riot control tear gas grenade. Causes irritation, pain and makes you cry your eyes out.
@@ -448,7 +452,9 @@
         Quantity: 50
 
 - type: entity
-  parent: SmokeGrenade # Frontier: removed BaseEngineeringContraband
+  parent:
+  - SmokeGrenade
+  - NotContraband
   id: MetalFoamGrenade
   name: metal foam grenade
   description: An emergency tool used for patching hull breaches with special quick-set metal foam. Almost as good as real floors!
@@ -520,7 +526,7 @@
 - type: entity
   name: syndicate trickybomb
   description: A syndicate-manufactured explosive used to make an excellent distraction.
-  parent: [GrenadeDummy, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [GrenadeDummy, BaseC1Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: SyndieTrickyBomb
   components:
   - type: Sprite

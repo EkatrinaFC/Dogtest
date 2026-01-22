@@ -304,7 +304,7 @@
     vendPrice: 0
 
 - type: entity
-  parent: [BaseC3CultContrabandNoValue, BaseItem]
+  parent: [BaseC4ContrabandUnredeemable, BaseItem]
   id: FuelSkrungle
   name: skrungle
   description: An unholy fuel that powers most generators. It resonates with dark energies.

@@ -51,6 +51,14 @@
   id: Class3MobConstruct
   examineText: contraband-examine-text-Class3MobConstruct
 
+- type: contrabandSeverity
+  id: Class4General
+  examineText: contraband-examine-text-Class4General
+
+- type: contrabandSeverity
+  id: NotContraband # end my stpid puppy life
+  examineText: contraband-examine-text-Class4General
+
 # Not necessarily contraband, but items of interest to pirates.
 - type: contrabandSeverity
   id: PirateTarget

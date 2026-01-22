@@ -116,7 +116,9 @@
 - type: entity
   id: NFMagazinePistol45Incendiary
   name: pistol magazine (.45 pistol, incendiary)
-  parent: NFBaseMagazinePistol45
+  parent:
+  - NFBaseMagazinePistol45
+  - BaseC2Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol45Incendiary
@@ -145,7 +147,9 @@
 - type: entity
   id: NFMagazinePistol45Uranium
   name: pistol magazine (.45 pistol, uranium)
-  parent: NFBaseMagazinePistol45
+  parent:
+  - NFBaseMagazinePistol45
+  - BaseC4Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol45Uranium

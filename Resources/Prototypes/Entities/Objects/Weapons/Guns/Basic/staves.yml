@@ -2,7 +2,9 @@
 
 - type: entity
   name: staff of healing
-  parent: WeaponStaffBase
+  parent:
+  - WeaponStaffBase
+  - NotContraband
   id: WeaponStaffHealing
   description: You don't foresee having to use this in your quest for carnage too often.
   components:

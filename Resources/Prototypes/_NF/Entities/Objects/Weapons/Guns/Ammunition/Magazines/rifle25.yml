@@ -33,7 +33,9 @@
 - type: entity
   id: MagazineCaselessRifleRubber
   name: magazine (.25 caseless, rubber)
-  parent: BaseMagazineCaselessRifle
+  parent:
+  - BaseMagazineCaselessRifle
+  - BaseC4ContrabandUnredeemable
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25Rubber

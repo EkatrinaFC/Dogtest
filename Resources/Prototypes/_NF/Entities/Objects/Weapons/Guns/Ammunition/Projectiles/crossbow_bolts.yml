@@ -279,7 +279,7 @@
   id: CrossbowBoltUraniumGlassShard
 
 - type: entity
-  parent: [ BaseC3ContrabandNoValue, CrossbowBolt ]
+  parent: [ BaseC4ContrabandUnredeemable, CrossbowBolt ]
   id: CrossbowBoltUraniumGlassShard
   name: uranium glass shard bolt
   description: A bolt with a uranium glass shard as a tip. God have mercy on thy victims for you won't.
@@ -347,7 +347,7 @@
   id: CrossbowBoltPlasteel
 
 - type: entity
-  parent: [ BaseC3ContrabandNoValue, CrossbowBolt ]
+  parent: [ BaseC1ContrabandUnredeemable, CrossbowBolt ]
   id: CrossbowBoltPlasteel
   name: plasteel tipped bolt
   description: A bolt with plasteel tip. Has armor penetrating capabilities.
@@ -379,7 +379,7 @@
   id: CrossbowBoltExplosive
 
 - type: entity
-  parent: [ BaseC3ContrabandNoValue, BaseCrossbowBoltTrigger ]
+  parent: [ BaseC2ContrabandUnredeemable, BaseCrossbowBoltTrigger ]
   id: CrossbowBoltExplosive
   name: explosive bolt
   description: A bolt with small explosive charge.
@@ -424,7 +424,7 @@
   id: CrossbowBoltEMP
 
 - type: entity
-  parent: [ BaseC3ContrabandNoValue, BaseCrossbowBoltTrigger ]
+  parent: [ BaseC1ContrabandUnredeemable, BaseCrossbowBoltTrigger ]
   id: CrossbowBoltEMP
   name: EMP bolt
   description: A bolt with small power cell attached to it.
@@ -473,7 +473,7 @@
   id: CrossbowBoltIncendiary
 
 - type: entity
-  parent: [ BaseC3ContrabandNoValue, BaseCrossbowBolt ]
+  parent: [ BaseC2ContrabandUnredeemable, BaseCrossbowBolt ]
   id: CrossbowBoltIncendiary
   name: incendiary bolt
   description: A bolt with a flare attached to it.
@@ -582,7 +582,7 @@
 # Blood cult
 - type: entity
   parent:
-  - BaseC3CultContrabandNoValue
+  - BaseC4ContrabandUnredeemable
   - CrossbowBolt
   - ConjuredObject10 # Despawns in 10 seconds
   id: CrossbowBoltBloodDrinker

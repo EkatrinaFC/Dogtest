@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseWeaponBallisticTurret, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseWeaponBallisticTurret, BaseC4Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: WeaponTurretSyndicate
   suffix: Syndicate
   components:

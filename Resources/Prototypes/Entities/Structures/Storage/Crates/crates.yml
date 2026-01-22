@@ -193,7 +193,7 @@
 # Secure Crates
 
 - type: entity
-  parent: [ CrateBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ CrateBaseSecure, BaseC4ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: CrateSecgear
   name: secgear crate
   components:
@@ -309,7 +309,7 @@
     access: [["Armory"]]
 
 - type: entity
-  parent: [ CrateBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ CrateBaseSecure, NotContraband ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   suffix: Armory, Secure
   id: CrateContrabandStorageSecure
   name: contraband storage crate
@@ -821,7 +821,7 @@
     state: base
 
 - type: entity
-  parent: [ BaseC3SyndicateContraband, CrateGenericSteel ] # Frontier: Added BaseC3SyndicateContraband
+  parent: [ BaseC1Contraband, CrateGenericSteel ] # Frontier: Added BaseC4Contraband
   id: CrateSyndicate
   name: Syndicate crate
   description: A dark steel crate with red bands and a letter S embossed on the front.

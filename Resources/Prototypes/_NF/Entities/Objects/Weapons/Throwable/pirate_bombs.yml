@@ -1,5 +1,5 @@
 - type: entity
-  parent: [GrenadeBase, BaseC3PirateContraband]
+  parent: [GrenadeBase, BaseC2Contraband]
   id: PirateGrenadeBase
   abstract: true
   components:
@@ -24,7 +24,9 @@
         acts: ["Destruction"]
 
 - type: entity
-  parent: PirateGrenadeBase
+  parent:
+  - PirateGrenadeBase
+  - BaseC4Contraband
   id: PirateGrenadeRadiation
   name: green pirate grenade
   description: A foul-smelling grenade that makes you feel fuzzy.
@@ -42,7 +44,9 @@
     canCreateVacuum: false
 
 - type: entity
-  parent: PirateGrenadeBase
+  parent:
+  - PirateGrenadeBase
+  - BaseC3Contraband
   id: PirateGrenadeConcussion
   name: gray pirate grenade
   description: A solid grenade that feels like a cannonball.

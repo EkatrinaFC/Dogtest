@@ -8,6 +8,8 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Linq;
+using Content.Server._Coyote;
+using Content.Shared._Coyote;
 
 namespace Content.Shared.Contraband;
 
@@ -28,9 +30,31 @@ public sealed class ContrabandSystem : EntitySystem
     public override void Initialize()
     {
         SubscribeLocalEvent<ContrabandComponent, GetVerbsEvent<ExamineVerb>>(OnDetailedExamine);
+        SubscribeLocalEvent<ContrabandComponent, ComponentInit>(BounceIfNotContraband);
+        SubscribeLocalEvent<UnContrabandComponent, ComponentStartup>(RobloxOofDotOgg);
 
         Subs.CVar(_configuration, CCVars.ContrabandExamine, SetContrabandExamine, true);
         Subs.CVar(_configuration, CCVars.ContrabandExamineOnlyInHUD, SetContrabandExamineOnlyInHUD, true);
+    }
+
+    private void BounceIfNotContraband(EntityUid uid, ContrabandComponent component, ref ComponentInit args)
+    {
+        if (_proto.TryIndex<ContrabandSeverityPrototype>(component.Severity, out var cban))
+        {
+            if (cban.ID == "NotContraband")
+            {
+                RemComp<ContrabandComponent>(uid); // COOL JOB, DAN
+            }
+        }
+        if (HasComp<UnContrabandComponent>(uid))
+        {
+            RemComp<ContrabandComponent>(uid); // EVEN COOLER JOB, COYOTE
+        }
+    }
+
+    private void RobloxOofDotOgg(EntityUid uid, UnContrabandComponent component, ref ComponentStartup args)
+    {
+        RemComp<ContrabandComponent>(uid); // THE COOLEST JOB, COYOTE
     }
 
     public void CopyDetails(EntityUid uid, ContrabandComponent other, ContrabandComponent? contraband = null)
@@ -50,6 +74,12 @@ public sealed class ContrabandSystem : EntitySystem
 
     private void OnDetailedExamine(EntityUid ent, ContrabandComponent component, ref GetVerbsEvent<ExamineVerb> args)
     {
+
+        if (HasComp<UnContrabandComponent>(ent))
+        {
+            RemComp<ContrabandComponent>(ent);
+            return;
+        }
 
         if (!_contrabandExamineEnabled)
             return;
@@ -107,8 +137,9 @@ public sealed class ContrabandSystem : EntitySystem
         // if it is fully restricted, you're department-less, or your department isn't in the allowed list, you cannot carry it. Otherwise, you can.
         var carryingMessage = Loc.GetString("contraband-examine-text-avoid-carrying-around");
         var iconTexture = "/Textures/Interface/VerbIcons/lock-red.svg.192dpi.png";
-        if (departments.Intersect(component.AllowedDepartments).Any()
-            || jobs.Contains(jobId))
+        // if (departments.Intersect(component.AllowedDepartments).Any()
+        //     || jobs.Contains(jobId))
+        if (severity.ID == "Class1")
         {
             carryingMessage = Loc.GetString("contraband-examine-text-in-the-clear");
             iconTexture = "/Textures/Interface/VerbIcons/unlock-green.svg.192dpi.png";

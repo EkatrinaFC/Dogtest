@@ -206,8 +206,8 @@
     accent: MobsterAccent
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
-  id: ClothingHeadHatCatEars
+  parent: [ ClothingHeadBase, NotContraband ] # Frontier: BaseSyndicateContraband<BaseC4Contraband
+  id: ClothingHeadHatCatEars # Not contraband, but still fking annoying
   name: cat ears
   description: "NYAH!"
   categories: [ DoNotMap ]

@@ -168,7 +168,9 @@
 - type: entity
   id: NFMagazinePistol35Incendiary
   name: pistol magazine (.35 pistol, incendiary)
-  parent: NFBaseMagazinePistol35
+  parent:
+  - NFBaseMagazinePistol35
+  - BaseC2Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Incendiary
@@ -194,7 +196,9 @@
 - type: entity
   id: NFMagazinePistol35Uranium
   name: pistol magazine (.35 pistol, uranium)
-  parent: NFBaseMagazinePistol35
+  parent:
+  - NFBaseMagazinePistol35
+  - BaseC4Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Uranium
@@ -343,7 +347,9 @@
 - type: entity
   id: NFMagazineHighCapacityPistol35Incendiary
   name: high capacity pistol magazine (.35 pistol, incendiary)
-  parent: NFBaseMagazineHighCapacityPistol35
+  parent:
+  - NFBaseMagazineHighCapacityPistol35
+  - BaseC2Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Incendiary
@@ -369,7 +375,9 @@
 - type: entity
   id: NFMagazineHighCapacityPistol35Uranium
   name: high capacity pistol magazine (.35 pistol, uranium)
-  parent: NFBaseMagazineHighCapacityPistol35
+  parent:
+  - NFBaseMagazineHighCapacityPistol35
+  - BaseC4Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Uranium
@@ -515,7 +523,9 @@
 - type: entity
   id: NFMagazineSubMachineGun35Incendiary
   name: smg magazine (.35 pistol, incendiary)
-  parent: NFBaseMagazinePistolSubMachineGun35
+  parent:
+  - NFBaseMagazinePistolSubMachineGun35
+  - BaseC2Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Incendiary
@@ -541,7 +551,9 @@
 - type: entity
   id: NFMagazineSubMachineGun35Uranium
   name: smg magazine (.35 pistol, uranium)
-  parent: NFBaseMagazinePistolSubMachineGun35
+  parent:
+  - NFBaseMagazinePistolSubMachineGun35
+  - BaseC4Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Uranium
@@ -647,7 +659,9 @@
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Incendiary
   name: top mounted smg magazine (.35 pistol, incendiary)
-  parent: NFBaseMagazineSubMachineGunTopMounted35
+  parent:
+  - NFBaseMagazineSubMachineGunTopMounted35
+  - BaseC2Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Incendiary
@@ -674,7 +688,9 @@
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Uranium
   name: top mounted smg magazine (.35 pistol, uranium)
-  parent: NFBaseMagazineSubMachineGunTopMounted35
+  parent:
+  - NFBaseMagazineSubMachineGunTopMounted35
+  - BaseC4Contraband
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Uranium

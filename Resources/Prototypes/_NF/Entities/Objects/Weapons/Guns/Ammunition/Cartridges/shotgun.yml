@@ -52,7 +52,9 @@
 - type: entity
   id: NFShellShotgunIncendiary
   name: shell (.50 incendiary)
-  parent: NFBaseShellShotgun
+  parent:
+  - NFBaseShellShotgun
+  - BaseC2ContrabandUnredeemable
   components:
   - type: Sprite
     layers:
@@ -80,7 +82,9 @@
 - type: entity
   id: NFShellShotgunUranium
   name: shell (.50 uranium)
-  parent: NFBaseShellShotgun
+  parent:
+  - NFBaseShellShotgun
+  - BaseC4ContrabandUnredeemable
   components:
   - type: Sprite
     layers:

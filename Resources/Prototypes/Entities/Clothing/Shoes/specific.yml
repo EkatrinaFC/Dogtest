@@ -94,7 +94,7 @@
     netsync: false
 
 - type: entity
-  parent: [ClothingShoesBaseButcherable, BaseC3CultContraband, ContrabandClothing ] # Frontier: added BaseC3CultContraband, ContrabandClothing
+  parent: [ClothingShoesBaseButcherable, BaseC1Contraband, ContrabandClothing ] # Frontier: added BaseC3Contraband, ContrabandClothing
   id: ClothingShoesCult
   name: cult shoes
   description: A pair of boots worn by the followers of Nar'Sie.
@@ -122,7 +122,7 @@
     maxContactWalkSlowdown: 0.7
 
 - type: entity
-  parent: [ClothingShoesBaseButcherable, BaseC3Contraband, ContrabandClothing ] # Frontier: BaseMajorContraband<BaseC3Contraband, added ContrabandClothing
+  parent: [ClothingShoesBaseButcherable, BaseC1ContrabandUnredeemable, ContrabandClothing ] # Frontier: BaseMajorContraband<BaseC3Contraband, added ContrabandClothing
   id: ClothingShoesSpaceNinja
   name: space ninja shoes
   description: A pair of nano-enhanced boots with built-in magnetic suction cups.
@@ -141,7 +141,7 @@
     footstepSoundCollection: null
 
 - type: entity
-  parent: [ClothingShoesBaseButcherable, BaseC2ContrabandUnredeemable] # Frontier: BaseMajorContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingShoesBaseButcherable, BaseC1ContrabandUnredeemable] # Frontier: BaseMajorContraband<BaseC2ContrabandUnredeemable
   id: ClothingShoesSwat
   name: swat shoes
   description: When you want to turn up the heat.
@@ -152,7 +152,7 @@
     sprite: Clothing/Shoes/Specific/swat.rsi
 
 - type: entity
-  parent: [ClothingShoesBaseButcherable, BaseC3WizardContraband] # Frontier: added BaseC3WizardContraband
+  parent: [ClothingShoesBaseButcherable, NotContraband] # Frontier: added NotContraband
   id: ClothingShoesWizard
   name: wizard shoes
   description: A pair of magic shoes.
@@ -203,7 +203,7 @@
           type: ChameleonBoundUserInterface
 
 - type: entity
-  parent: [ClothingShoesChameleon, BaseC3SyndicateContraband] # Frontier: add BaseC3SyndicateContraband
+  parent: [ClothingShoesChameleon, BaseC4Contraband] # Frontier: add BaseC4Contraband
   id: ClothingShoesChameleonNoSlips
   name: black shoes #actual name and description in uplink_catalog.yml
   suffix: No-slip, Chameleon

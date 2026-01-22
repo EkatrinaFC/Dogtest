@@ -487,7 +487,9 @@
 
 # Debug item for detecting gas deposits
 - type: entity
-  parent: PinpointerSyndicateNuclear
+  parent:
+  - PinpointerSyndicateNuclear
+  - NotContraband
   id: PinpointerGasDeposit
   name: gas deposit pinpointer
   description: Pointing to the nearest gas deposit.
