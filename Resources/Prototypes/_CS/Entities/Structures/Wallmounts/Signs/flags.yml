@@ -3,7 +3,6 @@
   id: DonkFlag
   name: Donk co flag
   description: A flag featuring Donk co's signature "D" Logo
-  path: _CS/Structures/Wallmounts/flags.rsi
   components:
   - type: Sprite
     sprite: _CS/Structures/Wallmounts/flags.rsi
