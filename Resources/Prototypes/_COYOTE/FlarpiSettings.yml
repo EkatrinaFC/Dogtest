@@ -6,7 +6,7 @@
   nearbyRadius: 25
   freelancerCountMode: Nearby
   freelancerCalcMode: Doubling
-  freelancerMaxCount: 3
+  freelancerMaxCount: 4
   nfsdCountMode: Nope
   nfsdCalcMode: Nope
 

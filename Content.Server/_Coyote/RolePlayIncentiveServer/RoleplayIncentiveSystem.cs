@@ -1536,6 +1536,8 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
                     if (!myCoords.InRange(_tf.GetMapCoordinates(otherUid), flarpiProto.NearbyRadius))
                         continue; // too far away
                 freelancersNearby++;
+                if (freelancersNearby >= flarpiProto.MaxFreelancersConsidered)
+                    break; // reached max count, stop checking
             }
             // apply freelancer count mode
             switch (flarpiProto.FreelancerCalculationMode)
@@ -1570,6 +1572,8 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
                     if (!myCoords.InRange(_tf.GetMapCoordinates(otherUid), flarpiProto.NearbyRadius))
                         continue; // too far away
                 nfsdNearby += n.Worth;
+                if (nfsdNearby >= flarpiProto.MaxNfsdsConsidered)
+                    break; // reached max count, stop checking
             }
             // apply nfsd count mode
             switch (flarpiProto.NfsdCalculationMode)
