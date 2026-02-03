@@ -1043,7 +1043,7 @@
   group: Pasta
   solids:
     FoodRiceDough: 1
-  reagents: 
+  reagents:
     TableSalt: 10
     Cornoil: 10
   recipeType: Assembler
