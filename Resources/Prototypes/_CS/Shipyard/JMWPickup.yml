@@ -23,7 +23,7 @@
 - type: gameMap
   id: JMWPickup
   mapName: 'JMW Pickup'
-  mapPath: Resources/Maps/_CS/Shuttles/JMWPickup.yml
+  mapPath: /Resources/Maps/_CS/Shuttles/JMWPickup.yml
   minPlayers: 0
   stations:
     JMW Pickup:
