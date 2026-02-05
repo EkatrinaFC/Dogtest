@@ -7,21 +7,22 @@
 # Discord: ???
 
 # Shuttle Notes:
-# Archetypes = Medical
-# Halftypes = Cargo
+# Archetypes = Medical/Cargo
+# Halftypes =
 # Domestic Areas = Full
 - type: vessel
   id: mender
   parent: BaseVessel
-  name: LL1 Mender
+  name: LVHI Mender
   description: An older model made by LVHI, which had far outlived it's usefulness as a cargo ship, now finds new life as a cheap medical vessel that retains some transport capabilities.
-  price: 100000 #45000 + 13500(LL1(30%) + 41500(price per tile(322)) = 100000
+  price: 145000 #40000 + 28000 (LL2(70%) + 80000(price per tile(322)) = 145000
   category: Medium
   group: Medical
   shuttlePath: /Maps/_CS/Shuttles/mender.yml
   guidebookPage: Null
   class:
   - Medical
+  - Cargo
   engine:
   - Uranium
 
